@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{492F9977-6A3F-4F47-9CDF-458BE2CC0391}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Jinyinmao.Application.ViewModel</RootNamespace>
+    <AssemblyName>Jinyinmao.Application.ViewModel</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Cloud|AnyCPU'">
+    <OutputPath>bin\Cloud\</OutputPath>
+    <DefineConstants>TRACE;CLOUD</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MoeLib, Version=6.1.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MoeLib.6.1.3.0\lib\net45\MoeLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MoeLib.Diagnostics, Version=6.1.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MoeLib.Diagnostics.6.1.3.0\lib\net45\MoeLib.Diagnostics.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MoeLib.Jinyinmao, Version=6.1.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MoeLib.Jinyinmao.6.1.3.0\lib\net45\MoeLib.Jinyinmao.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MoeLib.Web, Version=6.1.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MoeLib.Web.6.1.3.0\lib\net45\MoeLib.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.2.2\lib\net45\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MessageManager\Enum\SendMessageCode.cs" />
+    <Compile Include="MessageManager\Enum\SendResultCode.cs" />
+    <Compile Include="MessageManager\MessageModel.cs" />
+    <Compile Include="MessageManager\Enum\SendWay.cs" />
+    <Compile Include="MessageWorker\ChannelBalance.cs" />
+    <Compile Include="MessageWorker\SmsGatewayRequest.cs" />
+    <Compile Include="MessageWorker\SmsManagerMessageRequest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ValicodeManager\SendVeriCodeResult.cs" />
+    <Compile Include="ValicodeManager\Enum\VeriCodeType.cs" />
+    <Compile Include="ValicodeManager\UseVeriCodeResult.cs" />
+    <Compile Include="ValicodeManager\VerifyVeriCodeResult.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MessageWorker\Enum\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Jinyinmao.Application.Constants\Jinyinmao.Application.Constants.csproj">
+      <Project>{3f3b5f85-e6f7-4aa7-bf05-6a73bf12ac89}</Project>
+      <Name>Jinyinmao.Application.Constants</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

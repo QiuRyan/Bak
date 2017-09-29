@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ServiceConfiguration serviceName="jinyinmao.MessageWorker.CloudService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2015-04.2.6">
+  <Role name="Jinyinmao.MessageWoker">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="AppKeys" value="&amp;lt;RSAKeyValue&amp;gt;&amp;lt;Modulus&amp;gt;8ATk6BoXNT8fRtvqxo/QI+j3KPWx2kTC6UtH9IfmrPqbDHfxpsA4y0bjy3jg8xIA6N1yJGaA36GSLlqymH2y9NI1TvmMXCttF7b/+LgN/ZdUeoosk7HmnzG016XfEel4AudjFOX27uJEi4cawxuvxJhQYGvr3C9CrZU/U2vh1UowGMokrPbRBgd6hMpCaP2g7wLQ5lW0o1uLLWUWho3/ow7j4IY/P1KM6olY8iHoOrDBxafxYXuFnZEUrxtkBKWQS7r5unnBjRzPGnv4Uzh8bPml1bSwEfx7DHC1e1QgrMChV+CL68JMRn1fnVWmD6HP5JD4Gry/fSinlZF5pYpEmQ==&amp;lt;/Modulus&amp;gt;&amp;lt;Exponent&amp;gt;AQAB&amp;lt;/Exponent&amp;gt;&amp;lt;P&amp;gt;9ln3NXiGcdHg8X/X7mJLCnagHENV/qAD8lsyb4qvWhxAfHIDrBMLHJQzG/JU+jsaMeK+/yRSpRaC3gzjkUnfloKurm+oklWVSJXPI6xKEyBTf4S2Jicj8wgjlS3f4qFHIP2JiiKP05BOpvWve3SpSx90sSK96PZmybnV8CaLxkc=&amp;lt;/P&amp;gt;&amp;lt;Q&amp;gt;+WtwFCryvwjs0IqyC0Xkr5Qgfk8sGCkafqSQ5UkJW+u73WNLAjjfMTjmX2iGQ3mbbO43G9XCWsMnK3SMY4XSvmvKMxJt47iZF6tpx8nEaJswqmhejqcU3GWOaWwEQIPXW3+GoUnhttS877WmePgkXZ9xS/9KfovtNQ+p9K7frh8=&amp;lt;/Q&amp;gt;&amp;lt;DP&amp;gt;cRHZ5TDshFFQbYfAFCoJR0QrOM2vKq9HIHW7MHb3BOTytCugg9o5v2RGEQ2o8zEtVLg98d06EYvDhSdlS8ocVXiltGqLdJ7TZf1clYL+fMjZii3fbKOKXIHf0xi7KcncW8gC2OQEH5acgwVBBekFyvUlGihYAhUWGICzMQaAIQE=&amp;lt;/DP&amp;gt;&amp;lt;DQ&amp;gt;RPX3nxvg0gDduSsf3w4MFJ+X/FRXlLaIpMtLZJm1BL1AzA1QB+VBkJJy354+wRk2Z//VLNUFT6L1iYZH6pxtkEitN0G5MGUxruGt9ZdLvsBpzDPfMQHxOp65qVw8MLpDKQExcBbFWY+oTX6j8H5rT5dt890585MsmqciDozrO3E=&amp;lt;/DQ&amp;gt;&amp;lt;InverseQ&amp;gt;wSzeJPezD/TZdaSjOlKof8N26IrqGKKlQKGNpkifHG4Ub+TSCVOI9bgHouyXR1L3wqLp2jNBYFO+MLZjhzI2vRZd/X+5Ae2rTEW9zbsaXnvKJD0LX9HETLjTfyN1Xnj3FydOasiVB2XTCPAqyKgikZauaVB78LTzQNDczqEndMw=&amp;lt;/InverseQ&amp;gt;&amp;lt;D&amp;gt;DIp3ly94BxMJTwwCBvtlc4n+yyYknjeu/CIhxvVBT494Vwe3y3b07vKPco22uB5jTzlKaRiYcVbdyvbNNxv2QH7UYQHT+M5z19XeYCPJynZSPZ348fWGDAQgI49GbXjjCY/OC+iL5SyoZvvuy/v8hURtpyQXFy7za8YbSzkrUVDz2FzeU8SQ47MTbpEkhq0bfENjZaI1W2gZkax5KdgXOBPD2X+il9mv1otp1alB9q1mYTpX/HxUXUJSenqRzxv002IaiYkLh9lerFn/BK8Rpd65cIWr2TYStCSgiQtEyCJn/q1S7IsrZU45aeo/4RpoyI87bsi0LMnKig3EctK4cw==&amp;lt;/D&amp;gt;&amp;lt;/RSAKeyValue&amp;gt;" />
+      <Setting name="Env" value="Dev" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="BlobEndpoint=https://jymstoredev.blob.core.chinacloudapi.cn/;QueueEndpoint=https://jymstoredev.queue.core.chinacloudapi.cn/;TableEndpoint=https://jymstoredev.table.core.chinacloudapi.cn/;AccountName=jymstoredev;AccountKey=1dCLRLeIeUlLAIBsS9rYdCyFg3UNU239MkwzNOj3BYbREOlnBmM4kfTPrgvKDhSmh6sRp2MdkEYJTv4Ht3fCcg==" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="jym-remote" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBpQYJKoZIhvcNAQcDoIIBljCCAZICAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCED8ZTWrIZ6qzTYTY0pgrKkQwDQYJKoZIhvcNAQEBBQAEggEAyfDP27H2+6LOY4aHv7XPqe7VLhiUdUK4rREwrGXy+EtaGuz5n11VVS+SVdyBKy2BegBV0XqMp8a3dqkXB7r2I5CXVfngPyEir2CdSZ6oUUn3zU+aXIb9PS5kPLjmxVNPOEKsUVah+pU6QJWorpQNRbkux8Ll7Ye6+odWxX5BxzdSKN6eG30ta5ZfxMg9+LGEZWAmOF6any+lslm1f2aF1h+h+HpOVqlxNQkzNCImETd6rn0yjY+xuVjiww/pjtCuWXbDqmp5O52DSr5UMo3OwxTsGxOl7+pkEzOp3tqhfSG/wPeX6BivU64eSoO4nZBnxe50fsiuQ2w5RJdfjXN35DA7BgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECMm9qBG8AGEggBgFKJXVrg4z9zyscqHa4iHszHtO1uiDRGI=" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2017-01-01T23:59:59.0000000+08:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="EAEBC85D3723BAF21E6E7926F150C0CE39D299C7" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+  <NetworkConfiguration>
+    <VirtualNetworkSite name="VPN-dev" />
+    <AddressAssignments>
+      <InstanceAddress roleName="Jinyinmao.MessageWoker">
+        <Subnets>
+          <Subnet name="Subnet-web" />
+        </Subnets>
+      </InstanceAddress>
+    </AddressAssignments>
+  </NetworkConfiguration>
+</ServiceConfiguration>

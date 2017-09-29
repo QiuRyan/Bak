@@ -1,0 +1,55 @@
+1. Batch Script 
+Government/BuildScripts/prebuild.bat
+Modify Environment
+Advanced: Fail on Standard Error
+Control Options: Enabled Always Run
+
+2. PowerShell 
+Government/BuildScripts/prebuild.ps1
+Advanced: Working folder: Government/Grunt 
+Control Options: Enabled
+
+3. NuGet Installer 
+Government/Source/Government.sln
+Advanced: Working folder: Government/Grunt 
+Control Options: Enabled
+
+4. VisualStudioBuild 
+Government/Source/Jinyinmao.Government/Jinyinmao.Government.csproj
+/t:PublishToFileSystem /p:PublishDestination=$(Build.SourcesDirectory)\Government\Release\$(Build.SourceVersion)\Government\Local
+AnyCPU 
+Release
+Visual Studio: Latest
+MSBuild: Latest x64
+Record Project Details: Enable
+Control Options: Enabled
+
+4. VisualStudioBuild 
+Government/Source/Jinyinmao.Government.CloudService/Jinyinmao.Government.CloudService.ccproj 
+/t:Publish /p:TargetProfile=Cloud /p:PublishDir=$(Build.SourcesDirectory)\Government\Release\$(Build.SourceVersion)\Government\DevTest
+AnyCPU 
+Cloud
+Visual Studio: Latest
+MSBuild: Latest x64
+Record Project Details: Enable
+Control Options: Enabled
+
+5. PowerShell
+Government/BuildScripts/upgradeCloudServiceSize.ps1
+Advanced: Working folder: Government/Grunt 
+Control Options: Enabled
+
+6. VisualStudioBuild
+Government/Source/Jinyinmao.Government.CloudService/Jinyinmao.Government.CloudService.ccproj 
+/t:Publish /p:TargetProfile=Cloud /p:PublishDir=$(Build.SourcesDirectory)\Government\Release\$(Build.SourceVersion)\Government\Product
+AnyCPU 
+Cloud
+Visual Studio: Latest
+MSBuild: Latest x64
+Record Project Details: Enable
+Control Options: Enabled
+
+7. PowerShell
+Government/BuildScripts/postbuild.ps1
+Advanced: Working folder: Government/Grunt 
+Control Options: Enabled Continue on Error Always Run

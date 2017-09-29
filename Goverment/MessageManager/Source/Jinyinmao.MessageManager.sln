@@ -1,0 +1,229 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jinyinmao.MessageManagerLab", "MessageManagerLab\Jinyinmao.MessageManagerLab.csproj", "{31FB7694-B339-4B1C-BF23-162D05B3B7D0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00 - Doc", "00 - Doc", "{85EE67FD-C971-4D09-A50E-31431C1413CA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - WebApi", "01 - WebApi", "{7B2C0AB3-BF8E-459E-99B6-4D94BF063F62}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - DataDomain", "02 - DataDomain", "{CDAD5E50-A988-41D5-A8D0-AC1A20728BFD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "07 - Lab", "07 - Lab", "{DDDC9FF5-26EA-4ECC-9EA4-49707D4E51A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jinyinmao.MessageManager.Api", "MessageManager.Api\Jinyinmao.MessageManager.Api.csproj", "{D33A81F2-C195-4D70-82CD-358FF3557FE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jinyinmao.MessageManager.Domain.Entity", "MessageManager.Domain.Entity\Jinyinmao.MessageManager.Domain.Entity.csproj", "{CC3BC245-5869-45C7-AF92-8705050B1AD2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jinyinmao.MessageManager.Domain.Bll", "MessageManager.Domain.Bll\Jinyinmao.MessageManager.Domain.Bll.csproj", "{48ABBF39-EF50-41D6-8183-011C906CB540}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jinyinmao.MessageWoker", "MessageWoker\Jinyinmao.MessageWoker.csproj", "{D68FADE5-191B-4EB4-B6AF-8BBDE44DF605}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 - WokerRole", "04 - WokerRole", "{95EBBA87-520D-4528-A279-B6C6122795B2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05 - Common", "05 - Common", "{B4C2742C-1EAC-4CED-92A8-3E85EA6BE629}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jinyinmao.Application.ViewModel", "Application.ViewModel\Jinyinmao.Application.ViewModel.csproj", "{492F9977-6A3F-4F47-9CDF-458BE2CC0391}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MessageManager", "MessageManager", "{B44A9407-EA55-4DCC-BD59-C035611D8CA2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ValidateCode", "ValidateCode", "{E8DD3285-DC3F-438F-80DD-5BC0880A162E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jinyinmao.ValidateCode.Domain.Bll", "ValidateCode.Domain.Bll\Jinyinmao.ValidateCode.Domain.Bll.csproj", "{56F28630-0677-44FF-9036-4D752986C02D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jinyinmao.ValidateCode.Domain.Entity", "ValidateCode.Domain.Entity\Jinyinmao.ValidateCode.Domain.Entity.csproj", "{C72B8033-E905-42E5-A21C-A5A048F0FD20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jinyinmao.ValidateCode.Api", "ValidateCode.Api\Jinyinmao.ValidateCode.Api.csproj", "{A89C57CD-9D5A-48A6-B326-B4B46D481270}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MessageWorker", "MessageWorker", "{278225DF-27A9-4C22-9225-15BC5CAF62A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jinyinmao.MessageWorker.Domain.Bll", "MessageWorker.Domain.Bll\Jinyinmao.MessageWorker.Domain.Bll.csproj", "{B7583970-BE82-4834-BC58-64FDCCDB1104}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jinyinmao.MessageWorker.Domain.Entity", "MessageWorker.Domain.Entity\Jinyinmao.MessageWorker.Domain.Entity.csproj", "{364A8FDD-38D2-4CEB-A757-940F40997EBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jinyinmao.MessageWorkerHost", "MessageWorkerHost\Jinyinmao.MessageWorkerHost.csproj", "{3CB2A85A-7C67-4E04-B609-F8623F7F9532}"
+EndProject
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "Jinyinmao.ValidateCode.Api.CloudService", "Jinyinmao.ValidateCode.Api.CloudService\Jinyinmao.ValidateCode.Api.CloudService.ccproj", "{15BF5DB6-5D52-44D5-B2C7-5AB638CE072A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06 - Config", "06 - Config", "{EF720253-E222-4206-8E55-52E267AD8B64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jinyinmao.ValidateCode.Api.Config", "Jinyinmao.ValidateCode.Api.Config\Jinyinmao.ValidateCode.Api.Config.csproj", "{0C8B0494-54C3-4486-9ACB-976C7EA1B513}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Services", "03 - Services", "{38D68B39-F9F1-4742-907A-FB0C2450B001}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jinyinmao.MessageManager.Services", "Jinyinmao.MessageManager.Services\Jinyinmao.MessageManager.Services.csproj", "{9B584E40-7793-4F30-A30D-5CF7EA4BDA58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jinyinmao.MessageManager.Api.Config", "Jinyinmao.MessageManager.Api.Config\Jinyinmao.MessageManager.Api.Config.csproj", "{A7CB7317-1840-4840-8B6E-FB1D543AEB34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jinyinmao.Application.Constants", "Jinyinmao.Application.Constants\Jinyinmao.Application.Constants.csproj", "{3F3B5F85-E6F7-4AA7-BF05-6A73BF12AC89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jinyinmao.MessageWorker.Config", "jinyinmao.MessageWorker.Config\jinyinmao.MessageWorker.Config.csproj", "{96BE1068-DCDD-407D-843B-1E51B3851A02}"
+EndProject
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "jinyinmao.MessageWorker.CloudService", "jinyinmao.MessageWorker.CloudService\jinyinmao.MessageWorker.CloudService.ccproj", "{B4C838F2-774C-45D0-AA63-7070D3170890}"
+EndProject
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "Jinyinmao.MessageManager.CloudService", "Jinyinmao.MessageManager.CloudService\Jinyinmao.MessageManager.CloudService.ccproj", "{3E37FEA7-FCFD-457F-82E6-8DBF20B25D4F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8FFC673F-26A0-47B3-8929-707913D4A888}"
+	ProjectSection(SolutionItems) = preProject
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Cloud|Any CPU = Cloud|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{31FB7694-B339-4B1C-BF23-162D05B3B7D0}.Cloud|Any CPU.ActiveCfg = Cloud|Any CPU
+		{31FB7694-B339-4B1C-BF23-162D05B3B7D0}.Cloud|Any CPU.Build.0 = Cloud|Any CPU
+		{31FB7694-B339-4B1C-BF23-162D05B3B7D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31FB7694-B339-4B1C-BF23-162D05B3B7D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31FB7694-B339-4B1C-BF23-162D05B3B7D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31FB7694-B339-4B1C-BF23-162D05B3B7D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D33A81F2-C195-4D70-82CD-358FF3557FE7}.Cloud|Any CPU.ActiveCfg = Cloud|Any CPU
+		{D33A81F2-C195-4D70-82CD-358FF3557FE7}.Cloud|Any CPU.Build.0 = Cloud|Any CPU
+		{D33A81F2-C195-4D70-82CD-358FF3557FE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D33A81F2-C195-4D70-82CD-358FF3557FE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D33A81F2-C195-4D70-82CD-358FF3557FE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D33A81F2-C195-4D70-82CD-358FF3557FE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC3BC245-5869-45C7-AF92-8705050B1AD2}.Cloud|Any CPU.ActiveCfg = Cloud|Any CPU
+		{CC3BC245-5869-45C7-AF92-8705050B1AD2}.Cloud|Any CPU.Build.0 = Cloud|Any CPU
+		{CC3BC245-5869-45C7-AF92-8705050B1AD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC3BC245-5869-45C7-AF92-8705050B1AD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC3BC245-5869-45C7-AF92-8705050B1AD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC3BC245-5869-45C7-AF92-8705050B1AD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48ABBF39-EF50-41D6-8183-011C906CB540}.Cloud|Any CPU.ActiveCfg = Cloud|Any CPU
+		{48ABBF39-EF50-41D6-8183-011C906CB540}.Cloud|Any CPU.Build.0 = Cloud|Any CPU
+		{48ABBF39-EF50-41D6-8183-011C906CB540}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48ABBF39-EF50-41D6-8183-011C906CB540}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48ABBF39-EF50-41D6-8183-011C906CB540}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48ABBF39-EF50-41D6-8183-011C906CB540}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D68FADE5-191B-4EB4-B6AF-8BBDE44DF605}.Cloud|Any CPU.ActiveCfg = Cloud|Any CPU
+		{D68FADE5-191B-4EB4-B6AF-8BBDE44DF605}.Cloud|Any CPU.Build.0 = Cloud|Any CPU
+		{D68FADE5-191B-4EB4-B6AF-8BBDE44DF605}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D68FADE5-191B-4EB4-B6AF-8BBDE44DF605}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D68FADE5-191B-4EB4-B6AF-8BBDE44DF605}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D68FADE5-191B-4EB4-B6AF-8BBDE44DF605}.Release|Any CPU.Build.0 = Release|Any CPU
+		{492F9977-6A3F-4F47-9CDF-458BE2CC0391}.Cloud|Any CPU.ActiveCfg = Cloud|Any CPU
+		{492F9977-6A3F-4F47-9CDF-458BE2CC0391}.Cloud|Any CPU.Build.0 = Cloud|Any CPU
+		{492F9977-6A3F-4F47-9CDF-458BE2CC0391}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{492F9977-6A3F-4F47-9CDF-458BE2CC0391}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{492F9977-6A3F-4F47-9CDF-458BE2CC0391}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{492F9977-6A3F-4F47-9CDF-458BE2CC0391}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56F28630-0677-44FF-9036-4D752986C02D}.Cloud|Any CPU.ActiveCfg = Cloud|Any CPU
+		{56F28630-0677-44FF-9036-4D752986C02D}.Cloud|Any CPU.Build.0 = Cloud|Any CPU
+		{56F28630-0677-44FF-9036-4D752986C02D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56F28630-0677-44FF-9036-4D752986C02D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56F28630-0677-44FF-9036-4D752986C02D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56F28630-0677-44FF-9036-4D752986C02D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C72B8033-E905-42E5-A21C-A5A048F0FD20}.Cloud|Any CPU.ActiveCfg = Cloud|Any CPU
+		{C72B8033-E905-42E5-A21C-A5A048F0FD20}.Cloud|Any CPU.Build.0 = Cloud|Any CPU
+		{C72B8033-E905-42E5-A21C-A5A048F0FD20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C72B8033-E905-42E5-A21C-A5A048F0FD20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C72B8033-E905-42E5-A21C-A5A048F0FD20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C72B8033-E905-42E5-A21C-A5A048F0FD20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A89C57CD-9D5A-48A6-B326-B4B46D481270}.Cloud|Any CPU.ActiveCfg = Cloud|Any CPU
+		{A89C57CD-9D5A-48A6-B326-B4B46D481270}.Cloud|Any CPU.Build.0 = Cloud|Any CPU
+		{A89C57CD-9D5A-48A6-B326-B4B46D481270}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A89C57CD-9D5A-48A6-B326-B4B46D481270}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A89C57CD-9D5A-48A6-B326-B4B46D481270}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A89C57CD-9D5A-48A6-B326-B4B46D481270}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7583970-BE82-4834-BC58-64FDCCDB1104}.Cloud|Any CPU.ActiveCfg = Cloud|Any CPU
+		{B7583970-BE82-4834-BC58-64FDCCDB1104}.Cloud|Any CPU.Build.0 = Cloud|Any CPU
+		{B7583970-BE82-4834-BC58-64FDCCDB1104}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7583970-BE82-4834-BC58-64FDCCDB1104}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7583970-BE82-4834-BC58-64FDCCDB1104}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7583970-BE82-4834-BC58-64FDCCDB1104}.Release|Any CPU.Build.0 = Release|Any CPU
+		{364A8FDD-38D2-4CEB-A757-940F40997EBC}.Cloud|Any CPU.ActiveCfg = Cloud|Any CPU
+		{364A8FDD-38D2-4CEB-A757-940F40997EBC}.Cloud|Any CPU.Build.0 = Cloud|Any CPU
+		{364A8FDD-38D2-4CEB-A757-940F40997EBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{364A8FDD-38D2-4CEB-A757-940F40997EBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{364A8FDD-38D2-4CEB-A757-940F40997EBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{364A8FDD-38D2-4CEB-A757-940F40997EBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CB2A85A-7C67-4E04-B609-F8623F7F9532}.Cloud|Any CPU.ActiveCfg = Cloud|Any CPU
+		{3CB2A85A-7C67-4E04-B609-F8623F7F9532}.Cloud|Any CPU.Build.0 = Cloud|Any CPU
+		{3CB2A85A-7C67-4E04-B609-F8623F7F9532}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CB2A85A-7C67-4E04-B609-F8623F7F9532}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CB2A85A-7C67-4E04-B609-F8623F7F9532}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CB2A85A-7C67-4E04-B609-F8623F7F9532}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15BF5DB6-5D52-44D5-B2C7-5AB638CE072A}.Cloud|Any CPU.ActiveCfg = Cloud|Any CPU
+		{15BF5DB6-5D52-44D5-B2C7-5AB638CE072A}.Cloud|Any CPU.Build.0 = Cloud|Any CPU
+		{15BF5DB6-5D52-44D5-B2C7-5AB638CE072A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15BF5DB6-5D52-44D5-B2C7-5AB638CE072A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15BF5DB6-5D52-44D5-B2C7-5AB638CE072A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15BF5DB6-5D52-44D5-B2C7-5AB638CE072A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C8B0494-54C3-4486-9ACB-976C7EA1B513}.Cloud|Any CPU.ActiveCfg = Cloud|Any CPU
+		{0C8B0494-54C3-4486-9ACB-976C7EA1B513}.Cloud|Any CPU.Build.0 = Cloud|Any CPU
+		{0C8B0494-54C3-4486-9ACB-976C7EA1B513}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C8B0494-54C3-4486-9ACB-976C7EA1B513}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C8B0494-54C3-4486-9ACB-976C7EA1B513}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C8B0494-54C3-4486-9ACB-976C7EA1B513}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B584E40-7793-4F30-A30D-5CF7EA4BDA58}.Cloud|Any CPU.ActiveCfg = Cloud|Any CPU
+		{9B584E40-7793-4F30-A30D-5CF7EA4BDA58}.Cloud|Any CPU.Build.0 = Cloud|Any CPU
+		{9B584E40-7793-4F30-A30D-5CF7EA4BDA58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B584E40-7793-4F30-A30D-5CF7EA4BDA58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B584E40-7793-4F30-A30D-5CF7EA4BDA58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B584E40-7793-4F30-A30D-5CF7EA4BDA58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7CB7317-1840-4840-8B6E-FB1D543AEB34}.Cloud|Any CPU.ActiveCfg = Cloud|Any CPU
+		{A7CB7317-1840-4840-8B6E-FB1D543AEB34}.Cloud|Any CPU.Build.0 = Cloud|Any CPU
+		{A7CB7317-1840-4840-8B6E-FB1D543AEB34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7CB7317-1840-4840-8B6E-FB1D543AEB34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7CB7317-1840-4840-8B6E-FB1D543AEB34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7CB7317-1840-4840-8B6E-FB1D543AEB34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F3B5F85-E6F7-4AA7-BF05-6A73BF12AC89}.Cloud|Any CPU.ActiveCfg = Cloud|Any CPU
+		{3F3B5F85-E6F7-4AA7-BF05-6A73BF12AC89}.Cloud|Any CPU.Build.0 = Cloud|Any CPU
+		{3F3B5F85-E6F7-4AA7-BF05-6A73BF12AC89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F3B5F85-E6F7-4AA7-BF05-6A73BF12AC89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F3B5F85-E6F7-4AA7-BF05-6A73BF12AC89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F3B5F85-E6F7-4AA7-BF05-6A73BF12AC89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96BE1068-DCDD-407D-843B-1E51B3851A02}.Cloud|Any CPU.ActiveCfg = Cloud|Any CPU
+		{96BE1068-DCDD-407D-843B-1E51B3851A02}.Cloud|Any CPU.Build.0 = Cloud|Any CPU
+		{96BE1068-DCDD-407D-843B-1E51B3851A02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96BE1068-DCDD-407D-843B-1E51B3851A02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96BE1068-DCDD-407D-843B-1E51B3851A02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96BE1068-DCDD-407D-843B-1E51B3851A02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4C838F2-774C-45D0-AA63-7070D3170890}.Cloud|Any CPU.ActiveCfg = Cloud|Any CPU
+		{B4C838F2-774C-45D0-AA63-7070D3170890}.Cloud|Any CPU.Build.0 = Cloud|Any CPU
+		{B4C838F2-774C-45D0-AA63-7070D3170890}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4C838F2-774C-45D0-AA63-7070D3170890}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4C838F2-774C-45D0-AA63-7070D3170890}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4C838F2-774C-45D0-AA63-7070D3170890}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E37FEA7-FCFD-457F-82E6-8DBF20B25D4F}.Cloud|Any CPU.ActiveCfg = Cloud|Any CPU
+		{3E37FEA7-FCFD-457F-82E6-8DBF20B25D4F}.Cloud|Any CPU.Build.0 = Cloud|Any CPU
+		{3E37FEA7-FCFD-457F-82E6-8DBF20B25D4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E37FEA7-FCFD-457F-82E6-8DBF20B25D4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E37FEA7-FCFD-457F-82E6-8DBF20B25D4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E37FEA7-FCFD-457F-82E6-8DBF20B25D4F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{31FB7694-B339-4B1C-BF23-162D05B3B7D0} = {DDDC9FF5-26EA-4ECC-9EA4-49707D4E51A3}
+		{D33A81F2-C195-4D70-82CD-358FF3557FE7} = {7B2C0AB3-BF8E-459E-99B6-4D94BF063F62}
+		{CC3BC245-5869-45C7-AF92-8705050B1AD2} = {B44A9407-EA55-4DCC-BD59-C035611D8CA2}
+		{48ABBF39-EF50-41D6-8183-011C906CB540} = {B44A9407-EA55-4DCC-BD59-C035611D8CA2}
+		{D68FADE5-191B-4EB4-B6AF-8BBDE44DF605} = {95EBBA87-520D-4528-A279-B6C6122795B2}
+		{492F9977-6A3F-4F47-9CDF-458BE2CC0391} = {B4C2742C-1EAC-4CED-92A8-3E85EA6BE629}
+		{B44A9407-EA55-4DCC-BD59-C035611D8CA2} = {CDAD5E50-A988-41D5-A8D0-AC1A20728BFD}
+		{E8DD3285-DC3F-438F-80DD-5BC0880A162E} = {CDAD5E50-A988-41D5-A8D0-AC1A20728BFD}
+		{56F28630-0677-44FF-9036-4D752986C02D} = {E8DD3285-DC3F-438F-80DD-5BC0880A162E}
+		{C72B8033-E905-42E5-A21C-A5A048F0FD20} = {E8DD3285-DC3F-438F-80DD-5BC0880A162E}
+		{A89C57CD-9D5A-48A6-B326-B4B46D481270} = {7B2C0AB3-BF8E-459E-99B6-4D94BF063F62}
+		{278225DF-27A9-4C22-9225-15BC5CAF62A9} = {CDAD5E50-A988-41D5-A8D0-AC1A20728BFD}
+		{B7583970-BE82-4834-BC58-64FDCCDB1104} = {278225DF-27A9-4C22-9225-15BC5CAF62A9}
+		{364A8FDD-38D2-4CEB-A757-940F40997EBC} = {278225DF-27A9-4C22-9225-15BC5CAF62A9}
+		{3CB2A85A-7C67-4E04-B609-F8623F7F9532} = {DDDC9FF5-26EA-4ECC-9EA4-49707D4E51A3}
+		{0C8B0494-54C3-4486-9ACB-976C7EA1B513} = {EF720253-E222-4206-8E55-52E267AD8B64}
+		{9B584E40-7793-4F30-A30D-5CF7EA4BDA58} = {38D68B39-F9F1-4742-907A-FB0C2450B001}
+		{A7CB7317-1840-4840-8B6E-FB1D543AEB34} = {EF720253-E222-4206-8E55-52E267AD8B64}
+		{3F3B5F85-E6F7-4AA7-BF05-6A73BF12AC89} = {B4C2742C-1EAC-4CED-92A8-3E85EA6BE629}
+		{96BE1068-DCDD-407D-843B-1E51B3851A02} = {EF720253-E222-4206-8E55-52E267AD8B64}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8;packages\EnterpriseLibrary.TransientFaultHandling.Data.6.0.1304.1\lib\NET45
+	EndGlobalSection
+EndGlobal

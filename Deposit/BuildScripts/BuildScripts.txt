@@ -1,0 +1,65 @@
+1. Batch Script 
+Tirisfal/BuildScripts/prebuild.bat
+Modify Environment
+Advanced: Fail on Standard Error
+Control Options: Enabled Always Run
+
+2. PowerShell 
+Tirisfal/BuildScripts/prebuild.ps1
+Advanced: Working folder: Tirisfal/Grunt 
+Control Options: Enabled
+
+3. NuGet Installer 
+Tirisfal/Source/Jinyinmao.Tirisfal.sln
+Advanced: Working folder: Tirisfal/Grunt 
+Control Options: Enabled
+
+4. VisualStudioBuild 
+Tirisfal/Source/Jinyinmao.Tirisfal.Api.CloudService/Jinyinmao.Tirisfal.Api.CloudService.ccproj 
+/t:Publish /p:TargetProfile=Cloud /p:PublishDir=$(Build.SourcesDirectory)\Tirisfal\Release\$(Build.SourceVersion)\Tirisfal.Api\DevTest
+AnyCPU 
+Cloud
+Visual Studio: Latest
+MSBuild: Latest x64
+Record Project Details: Enable
+Control Options: Enabled
+
+5. VisualStudioBuild 
+Tirisfal/Source/Jinyinmao.Tirisfal.Silo.CloudService/Jinyinmao.Tirisfal.Silo.CloudService.ccproj 
+/t:Publish /p:TargetProfile=Cloud /p:PublishDir=$(Build.SourcesDirectory)\Tirisfal\Release\$(Build.SourceVersion)\Tirisfal.Silo\DevTest
+AnyCPU 
+Cloud
+Visual Studio: Latest
+MSBuild: Latest x64
+Record Project Details: Enable
+Control Options: Enabled
+
+6. PowerShell
+Tirisfal/BuildScripts/upgradeCloudServiceSize.ps1
+Advanced: Working folder: Tirisfal/Grunt 
+Control Options: Enabled
+
+7. VisualStudioBuild
+Tirisfal/Source/Jinyinmao.Tirisfal.Api.CloudService/Jinyinmao.Tirisfal.Api.CloudService.ccproj 
+/t:Publish /p:TargetProfile=Cloud /p:PublishDir=$(Build.SourcesDirectory)\Tirisfal\Release\$(Build.SourceVersion)\Tirisfal.Api\Product
+AnyCPU 
+Cloud
+Visual Studio: Latest
+MSBuild: Latest x64
+Record Project Details: Enable
+Control Options: Enabled
+
+8. VisualStudioBuild
+Tirisfal/Source/Jinyinmao.Tirisfal.Silo.CloudService/Jinyinmao.Tirisfal.Silo.CloudService.ccproj 
+/t:Publish /p:TargetProfile=Cloud /p:PublishDir=$(Build.SourcesDirectory)\Tirisfal\Release\$(Build.SourceVersion)\Tirisfal.Silo\Product
+AnyCPU 
+Cloud
+Visual Studio: Latest
+MSBuild: Latest x64
+Record Project Details: Enable
+Control Options: Enabled
+
+9. PowerShell
+Tirisfal/BuildScripts/postbuild.ps1
+Advanced: Working folder: Tirisfal/Grunt 
+Control Options: Enabled Continue on Error Always Run

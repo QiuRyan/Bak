@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{59FC14BE-01AD-4D43-ADF7-FE7688E3782C}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DepositLab</RootNamespace>
+    <AssemblyName>DepositLab</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Cloud|AnyCPU'">
+    <OutputPath>bin\Cloud\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ServiceBus, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAzure.ServiceBus.3.1.5\lib\net45-full\Microsoft.ServiceBus.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Configuration, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.WindowsAzure.ConfigurationManager.3.1.0\lib\net40\Microsoft.WindowsAzure.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.ServiceRuntime, Version=2.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="MoeLib, Version=6.2.17.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MoeLib.6.2.17.0\lib\net45\MoeLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MoeLib.Diagnostics, Version=6.2.17.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MoeLib.Diagnostics.6.2.17.0\lib\net45\MoeLib.Diagnostics.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MoeLib.Jinyinmao, Version=6.2.17.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MoeLib.Jinyinmao.6.2.17.0\lib\net45\MoeLib.Jinyinmao.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MoeLib.Jinyinmao.Azure, Version=6.2.17.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MoeLib.Jinyinmao.Azure.6.2.17.0\lib\net45\MoeLib.Jinyinmao.Azure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.2.3\lib\net45\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Jinyinmao.Asset.Service.Interface\Jinyinmao.Asset.Service.Interface.csproj">
+      <Project>{D5E383EC-09C1-4A24-892F-E2954555FAD3}</Project>
+      <Name>Jinyinmao.Asset.Service.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Jinyinmao.Asset.Service\Jinyinmao.Asset.Service.csproj">
+      <Project>{73AE5C1C-E57C-4172-A03E-55F18FCF881D}</Project>
+      <Name>Jinyinmao.Asset.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Jinyinmao.Deposit.Config\Jinyinmao.Deposit.Config.csproj">
+      <Project>{652804F7-0795-48E1-A436-4AC80FC30CC8}</Project>
+      <Name>Jinyinmao.Deposit.Config</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Jinyinmao.Deposit.Domain\Jinyinmao.Deposit.Domain.csproj">
+      <Project>{8992CF79-0502-46BD-B6CD-D8BD7782C66C}</Project>
+      <Name>Jinyinmao.Deposit.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Jinyinmao.Deposit.Library\Jinyinmao.Deposit.Lib.csproj">
+      <Project>{780AA30D-24BB-46AF-8F76-6D6C57BDA08C}</Project>
+      <Name>Jinyinmao.Deposit.Lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Jinyinmao.Deposit\Jinyinmao.Deposit.csproj">
+      <Project>{FF867721-B672-466A-87D1-7E7BB9942369}</Project>
+      <Name>Jinyinmao.Deposit</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Jinyinmao.Tirisfal.Service.Interface\Jinyinmao.Tirisfal.Service.Interface.csproj">
+      <Project>{4027139A-1D6E-4514-BBEF-0CF204CD8DE8}</Project>
+      <Name>Jinyinmao.Tirisfal.Service.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Jinyinmao.Tirisfal.Service\Jinyinmao.Tirisfal.Service.csproj">
+      <Project>{C5ED919B-5174-4C8A-A891-5A0F2A107F88}</Project>
+      <Name>Jinyinmao.Tirisfal.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,1 @@
+set PATH=C:\Users\lu.siqi\AppData\Roaming\npm;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;%PATH%

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ServiceConfiguration serviceName="Jinyinmao.Government.CloudService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2015-04.2.6">
+  <Role name="Jinyinmao.Government">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="AppKeys" value="&amp;lt;RSAKeyValue&amp;gt;&amp;lt;Modulus&amp;gt;l76CG6xHW6/9pqvX9X439xYf+e9Djf/c6os5UqJrqatL6csDRakEEH+unpbtPEYPWlY0xlfgtnwbZqUqg8F3X+QVC4lmEkxBa+oUfhyf81WnZPdOE5cVjvs2RgP8WE2JrWTHlyTaJoDxURi0SqNEOSBunHLiciqN1KYxQtvWVmtG8Qftxe8gLpDikpyOwnlJVoV1TKVg/QIT3qndRfBz20Cn0igmLmDJHRwf8qLg2Ry+TS2xHluwqD4yWDQxFjH06aNQ7tGNoH6LQ97ADlz2zzCJpZmnd0A8BBGPW+tCWNv/QqPMHOTWBsRnWtsNG9u/rYFswGGB+xSuPCrenP6kKQ==&amp;lt;/Modulus&amp;gt;&amp;lt;Exponent&amp;gt;AQAB&amp;lt;/Exponent&amp;gt;&amp;lt;P&amp;gt;zRWT3aLTCn6wp6HlL9vkFnUE5keuW9Vqc8Mo466zlDPvNeNt8nWaPeMMNsOKBgYPij7nIEymmsmhoxhsnzp/eaulSbGlZWVFazY/Vni9aiXi83X6KdoK21sUcGyFzsV44nKmGetjHo6ytexkxHe+GdejEfUNpzruh6U8rvO96Fk=&amp;lt;/P&amp;gt;&amp;lt;Q&amp;gt;vWrS902eu63ENO05x2LnF1fEEm80NXS6HIUKbTKC2o/Uh6Czo8kje7uR+r4eb4W6Mgz9uZeCSfBNu93TvFtZNP8f0Gs6kr49AdkPVhr6s3TzZt8iVvRVNBHRujc9ge9ecNLuR1FKgL8qhFxsaSOHoGJDCQ9KEsVgeOEevQwlIFE=&amp;lt;/Q&amp;gt;&amp;lt;DP&amp;gt;Lc2s6apM8iIbeEULN+YnifB2uKu3wGDo1pP21OsWxnnW6jUyQB2N5laISs7fS7scy2aDHk6gQx/XTuLMl79r6xOv5cacRwoYN/q0qK5st4Fgr7lgtuow1I8CAJ3sQKMP/ZtXh6Bv0cpTFZiHZO3Ncl4b2I3fj8L0tSztYbGkb3k=&amp;lt;/DP&amp;gt;&amp;lt;DQ&amp;gt;cNQ3AnTL/sONQnGkny48tVzkQI7ZLJZxXheplE4oQAS49mk1WHSxnDyowhGJk6i2tqWiZXDofR6VTzjdrS9EvhrSWpXk+BA1yun/Bq1fdJJPgpGbpOw57KBIq4HIM6PgP5iFsxmrJXG548oiEabGXTTq9XSUDQZhZt/CLZ4UZ2E=&amp;lt;/DQ&amp;gt;&amp;lt;InverseQ&amp;gt;nBbh5mQx0WBTNTYxuUjhVpJmMlbahmQCJ37Ht3qM3M09H9q6aqAPXqO+GhYG+sSTw2T0vkV6/b7zYJC1nhI6gharNfjr2fBRFS+X/nrfyiA/9ZEqUAzQo1xdlgs4+zqXCaGv9IXvrantlnWJivmGBFWOdLG+yhkLTjHXESQip0o=&amp;lt;/InverseQ&amp;gt;&amp;lt;D&amp;gt;A4CrfqmHnSNvEq+RRNKkxpCNbOa7s7Wl+wj7Kf/jRc+VKUCdIvi/hgT4eiMoNzWzyYVHYxOotXWgaUpjNJbc40r/vFwvzbjSYsQMtIuDGqoNutwlgnjAj+QXEN8rLjud87FplQDOA0kDKPjNwpJJsxrfSr+xH+sBCplKdk1eQXDf32asjNL/pqBQeDioLGsyqgd+hbNxOWL5FFpIq9OKZgwlWWc339Nu+l+8RwHUw7xohbCRfT+qauYJZY+sDDIjV7Sn5ckyhufH57UyqehPtjBlurEk2Q2RoeynvsN3Ra6w7J60PBgyLGrzpKCzNsPfvNcnOBSut8hj1dhDwEIgoQ==&amp;lt;/D&amp;gt;&amp;lt;/RSAKeyValue&amp;gt;" />
+      <Setting name="Env" value="Dev" />
+      <Setting name="GovernmentDatabaseConnectionString" value="Data Source=10.1.25.30;Database=jym-government;Integrated Security=False;User ID=db-admin-dev;Password=0SmDXp8i7MRfg29HJk1N;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="BlobEndpoint=https://jymstoredev.blob.core.chinacloudapi.cn/;QueueEndpoint=https://jymstoredev.queue.core.chinacloudapi.cn/;TableEndpoint=https://jymstoredev.table.core.chinacloudapi.cn/;AccountName=jymstoredev;AccountKey=1dCLRLeIeUlLAIBsS9rYdCyFg3UNU239MkwzNOj3BYbREOlnBmM4kfTPrgvKDhSmh6sRp2MdkEYJTv4Ht3fCcg==" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="jym-remote" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBpQYJKoZIhvcNAQcDoIIBljCCAZICAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCED8ZTWrIZ6qzTYTY0pgrKkQwDQYJKoZIhvcNAQEBBQAEggEAIGW9jfqH84uSjSrUw2i0ZNmr4ksZfyTIjkwc14OJLAjLuSObQ3uy5iZvIyr50jefEpYuPuhfA7qxTsaVbbfFlKTBROtnG6EizWlAtzuoviQoFkIxP5k8m/YcX61d7/yUZLvWveUHawQ49/DIOLyIeyl29MKtXuWn9C2QoElEyCrKFiNEFJAutul6MrGzhJNxDu0H7NlWpotDHYX30znHeMd2pkoAy9d9V8YjYoA1uTZ26j2TjL5SIz0A1zvrGjfmniwBnOuzYghUrvggfnOsI1xTGsp14gx2Mccc2asAFEMFq9EMWB7/JFzPTp8gEOzbrTa916GYSVNDdVh58Jy37zA7BgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECA9QchN3+xAcgBiHImPykaciom0BRl2FIw8LGnRJZQsbiNw=" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2017-01-01T23:59:59.0000000+08:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="JinyinmaoSSL" thumbprint="EAEBC85D3723BAF21E6E7926F150C0CE39D299C7" thumbprintAlgorithm="sha1" />
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="EAEBC85D3723BAF21E6E7926F150C0CE39D299C7" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+</ServiceConfiguration>

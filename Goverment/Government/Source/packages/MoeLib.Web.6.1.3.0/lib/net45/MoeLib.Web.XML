@@ -1,0 +1,647 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MoeLib.Web</name>
+    </assembly>
+    <members>
+        <member name="T:Moe.Lib.Web.ActionParameterRequiredAttribute">
+            <summary>
+                An action filter for checking whether the action parameter is null.
+            </summary>
+        </member>
+        <member name="M:Moe.Lib.Web.ActionParameterRequiredAttribute.#ctor(System.String)">
+            <summary>
+                Initializes a new instance of the <see cref="T:Moe.Lib.Web.ActionParameterRequiredAttribute" /> class.
+            </summary>
+            <param name="actionParameterName">Name of the action parameter.</param>
+            <exception cref="T:System.ArgumentNullException">actionParameterName</exception>
+        </member>
+        <member name="P:Moe.Lib.Web.ActionParameterRequiredAttribute.ActionParameterName">
+            <summary>
+                Gets the name of the action parameter.
+            </summary>
+            <value>The name of the action parameter.</value>
+        </member>
+        <member name="M:Moe.Lib.Web.ActionParameterRequiredAttribute.OnActionExecuting(System.Web.Http.Controllers.HttpActionContext)">
+            <summary>
+                Occurs before the action method is invoked.
+            </summary>
+            <param name="actionContext">The action context.</param>
+        </member>
+        <member name="M:Moe.Lib.Web.ActionParameterRequiredAttribute.FormatErrorMessage">
+            <summary>
+                Formats the error message.
+            </summary>
+            <returns>System.String.</returns>
+        </member>
+        <member name="T:Moe.Lib.Web.ActionParameterValidateAttribute">
+            <summary>
+                An action filter for validating action parameter, if validate failed, create a 400 response.
+            </summary>
+        </member>
+        <member name="M:Moe.Lib.Web.ActionParameterValidateAttribute.OnActionExecuting(System.Web.Http.Controllers.HttpActionContext)">
+            <summary>
+                Occurs before the action method is invoked.
+            </summary>
+            <param name="actionContext">The action context.</param>
+        </member>
+        <member name="T:Moe.Lib.Web.AvailableValuesAttribute">
+            <summary>
+                Determines whether the specified value of the object is valid.
+            </summary>
+        </member>
+        <member name="M:Moe.Lib.Web.AvailableValuesAttribute.#ctor(System.Object[])">
+            <summary>
+                Initializes a new instance of the <see cref="T:Moe.Lib.Web.AvailableValuesAttribute" /> class.
+            </summary>
+            <param name="values">The values.</param>
+        </member>
+        <member name="M:Moe.Lib.Web.AvailableValuesAttribute.FormatErrorMessage(System.String)">
+            <summary>
+                Applies formatting to an error message, based on the data field where the error occurred.
+            </summary>
+            <returns>
+                An instance of the formatted error message.
+            </returns>
+            <param name="name">The name to include in the formatted message.</param>
+        </member>
+        <member name="M:Moe.Lib.Web.AvailableValuesAttribute.IsValid(System.Object)">
+            <summary>
+                Determines whether the specified value of the object is valid.
+            </summary>
+            <returns>
+                true if the specified value is valid; otherwise, false.
+            </returns>
+            <param name="value">The value of the object to validate. </param>
+        </member>
+        <member name="T:Moe.Lib.Web.BatchHandler">
+            <summary>
+                Class BatchHandler.
+            </summary>
+        </member>
+        <member name="M:Moe.Lib.Web.BatchHandler.#ctor(System.Web.Http.HttpServer)">
+            <summary>
+                Initializes a new instance of the <see cref="T:Moe.Lib.Web.BatchHandler" /> class.
+            </summary>
+            <param name="server">The server.</param>
+        </member>
+        <member name="M:Moe.Lib.Web.BatchHandler.CreateResponseMessageAsync(System.Collections.Generic.IList{System.Net.Http.HttpResponseMessage},System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)">
+            <summary>
+                create response message as an asynchronous operation.
+            </summary>
+            <param name="responses">The responses.</param>
+            <param name="request">The request.</param>
+            <param name="cancellationToken">The cancellation token.</param>
+            <returns>Task&lt;HttpResponseMessage&gt;.</returns>
+        </member>
+        <member name="M:Moe.Lib.Web.BatchHandler.ParseBatchRequestsAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)">
+            <summary>
+                parse batch requests as an asynchronous operation.
+            </summary>
+            <param name="request">The request.</param>
+            <param name="cancellationToken">The cancellation token.</param>
+            <returns>Task&lt;IList&lt;HttpRequestMessage&gt;&gt;.</returns>
+        </member>
+        <member name="M:Moe.Lib.Web.BatchHandler.GetJsonRequestMessages(System.Net.Http.HttpRequestMessage)">
+            <summary>
+                Gets the json request messages.
+            </summary>
+            <param name="request">The request.</param>
+            <returns>Task&lt;JsonRequestMessage[]&gt;.</returns>
+        </member>
+        <member name="M:Moe.Lib.Web.BatchHandler.GetUrlencodeRequestMessages(System.Net.Http.HttpRequestMessage)">
+            <summary>
+                Gets the urlencode request messages.
+            </summary>
+            <param name="request">The request.</param>
+            <returns>Task&lt;JsonRequestMessage[]&gt;.</returns>
+        </member>
+        <member name="M:Moe.Lib.Web.BatchHandler.ParseRequestMessages(System.Net.Http.HttpRequestMessage)">
+            <summary>
+                Parses the request messages.
+            </summary>
+            <param name="request">The request.</param>
+            <returns>Task&lt;JsonRequestMessage[]&gt;.</returns>
+            <exception cref="T:System.ArgumentException">Invalid batch requests format;request</exception>
+        </member>
+        <member name="T:Moe.Lib.Web.EnumAvailableValuesAttribute">
+            <summary>
+                Class AvailableValuesAttribute.
+            </summary>
+        </member>
+        <member name="M:Moe.Lib.Web.EnumAvailableValuesAttribute.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="T:Moe.Lib.Web.AvailableValuesAttribute" /> class.
+            </summary>
+        </member>
+        <member name="M:Moe.Lib.Web.EnumAvailableValuesAttribute.FormatErrorMessage(System.String)">
+            <summary>
+                Applies formatting to an error message, based on the data field where the error occurred.
+            </summary>
+            <returns>
+                An instance of the formatted error message.
+            </returns>
+            <param name="name">The name to include in the formatted message.</param>
+        </member>
+        <member name="M:Moe.Lib.Web.EnumAvailableValuesAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)">
+            <summary>
+                Validates the specified value with respect to the current validation attribute.
+            </summary>
+            <returns>
+                An instance of the <see cref="T:System.ComponentModel.DataAnnotations.ValidationResult" /> class.
+            </returns>
+            <param name="value">The value to validate.</param>
+            <param name="validationContext">The context information about the validation operation.</param>
+        </member>
+        <member name="T:Moe.Lib.Web.ExceptionLogger">
+            <summary>
+                ExceptionLogger.
+            </summary>
+        </member>
+        <member name="M:Moe.Lib.Web.ExceptionLogger.Log(System.Web.Http.ExceptionHandling.ExceptionLoggerContext)">
+            <summary>
+                When overridden in a derived class, logs the exception synchronously.
+            </summary>
+            <param name="context">The exception logger context.</param>
+        </member>
+        <member name="T:Moe.Lib.Web.HttpConfigurationExtensions">
+            <summary>
+                HttpConfigurationExtensions.
+            </summary>
+        </member>
+        <member name="M:Moe.Lib.Web.HttpConfigurationExtensions.MapHttpBatchRoute(System.Web.Http.HttpConfiguration)">
+            <summary>
+                Maps the HTTP batch route.
+            </summary>
+            <param name="config">The configuration.</param>
+            <returns>HttpConfiguration.</returns>
+        </member>
+        <member name="M:Moe.Lib.Web.HttpConfigurationExtensions.UseOrderedFilter(System.Web.Http.HttpConfiguration)">
+            <summary>
+                Uses the ordered filter.
+            </summary>
+            <param name="config">The configuration.</param>
+            <returns>HttpConfiguration.</returns>
+        </member>
+        <member name="T:Moe.Lib.Web.HttpUtils">
+            <summary>
+                HttpUtils.
+            </summary>
+        </member>
+        <member name="F:Moe.Lib.Web.HttpUtils.HTTP_CONTEXT_BASE_KEY">
+            <summary>
+                The HTTP context base key
+            </summary>
+        </member>
+        <member name="M:Moe.Lib.Web.HttpUtils.AsHttpRequestMessage(System.Web.HttpRequestBase)">
+            <summary>
+                Ases the HTTP request message.
+            </summary>
+            <param name="request">The request.</param>
+            <returns>HttpRequestMessage.</returns>
+        </member>
+        <member name="M:Moe.Lib.Web.HttpUtils.CopyHeadersFrom(System.Net.Http.HttpRequestMessage,System.Web.HttpRequestBase)">
+            <summary>
+                Clones an <see cref="T:System.Net.HttpWebRequest" /> in order to send it again.
+            </summary>
+            <param name="message">The message to set headers on.</param>
+            <param name="request">The request with headers to clone.</param>
+        </member>
+        <member name="M:Moe.Lib.Web.HttpUtils.CopyHeadersFrom(System.Net.Http.HttpRequestMessage,System.Net.Http.HttpRequestMessage)">
+            <summary>
+                Clones an <see cref="T:System.Net.HttpWebRequest" /> in order to send it again.
+            </summary>
+            <param name="message">The message to set headers on.</param>
+            <param name="request">The request with headers to clone.</param>
+        </member>
+        <member name="M:Moe.Lib.Web.HttpUtils.Dump(System.Web.HttpRequest,System.Boolean)">
+            <summary>
+                Dumps the specified request include headers.
+            </summary>
+            <param name="httpRequest">The HTTP request.</param>
+            <param name="includeHeaders">if set to <c>true</c> [include headers].</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Moe.Lib.Web.HttpUtils.Dump(System.Net.Http.HttpRequestMessage,System.Boolean)">
+            <summary>
+                Dumps the specified request include headers.
+            </summary>
+            <param name="httpRequest">The HTTP request.</param>
+            <param name="includeHeaders">if set to <c>true</c> [include headers].</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Moe.Lib.Web.HttpUtils.GetCookie(System.Net.Http.HttpRequestMessage,System.String)">
+            <summary>
+            Returns an individual cookie from the cookies collection.
+            </summary>
+            <param name="request">The instance of <see cref="T:System.Net.Http.HttpRequestMessage"/>.</param>
+            <param name="cookieName">The name of the cookie.</param>
+            <returns>The cookie value. Return null if the cookie does not exist.</returns>
+            <exception cref="T:System.ArgumentNullException">If the request is null, throw the ArgumentNullException.</exception>
+            <exception cref="T:System.ArgumentNullException">If the cookieName is null, throw the ArgumentNullException.</exception>
+        </member>
+        <member name="M:Moe.Lib.Web.HttpUtils.GetHeader(System.Net.Http.HttpRequestMessage,System.String)">
+            <summary>
+            Returns an individual HTTP Header value that joins all the header value with ' '.
+            </summary>
+            <param name="request">The instance of <see cref="T:System.Net.Http.HttpRequestMessage"/>.</param>
+            <param name="key">The key of the header.</param>
+            <returns>The HTTP Header value that joins all the header value with ' '. Return null if the header does not exist.</returns>
+            <exception cref="T:System.ArgumentNullException">If the request is null, throw the ArgumentNullException.</exception>
+            <exception cref="T:System.ArgumentNullException">If the key is null, throw the ArgumentNullException.</exception>
+        </member>
+        <member name="M:Moe.Lib.Web.HttpUtils.GetHttpContext(System.Net.Http.HttpRequestMessage)">
+            <summary>
+                Gets the HTTP httpContext.
+            </summary>
+            <param name="request">The request.</param>
+            <returns>HttpContext.</returns>
+        </member>
+        <member name="M:Moe.Lib.Web.HttpUtils.GetHttpContext(System.Web.HttpContextBase)">
+            <summary>
+                Gets the HTTP httpContext.
+            </summary>
+            <param name="contextBase">The httpContext base.</param>
+            <returns>HttpContext.</returns>
+        </member>
+        <member name="M:Moe.Lib.Web.HttpUtils.GetQueryString(System.Net.Http.HttpRequestMessage,System.String)">
+            <summary>
+            Returns an individual querystring value.
+            </summary>
+            <param name="request">The instance of <see cref="T:System.Net.Http.HttpRequestMessage" />.</param>
+            <param name="key">The key.</param>
+            <returns>The querystring value. Return null if the querystring does not exist.</returns>
+            <exception cref="T:System.ArgumentNullException">If the request is null, throw the ArgumentNullException.</exception>
+            <exception cref="T:System.ArgumentNullException">If the key is null, throw the ArgumentNullException.</exception>
+        </member>
+        <member name="M:Moe.Lib.Web.HttpUtils.GetQueryStrings(System.Net.Http.HttpRequestMessage)">
+            <summary>
+            Returns a dictionary of QueryStrings that's easier to work with
+            than GetQueryNameValuePairs KevValuePairs collection.
+            If you need to pull a few single values use GetQueryString instead.
+            </summary>
+            <param name="request">The instance of <see cref="T:System.Net.Http.HttpRequestMessage"/>.</param>
+            <returns>The QueryStrings dictionary.</returns>
+            <exception cref="T:System.ArgumentNullException">If the request is null, throw the ArgumentNullException.</exception>
+        </member>
+        <member name="M:Moe.Lib.Web.HttpUtils.GetUserAgent(System.Net.Http.HttpRequestMessage)">
+            <summary>
+                Returns the user agent string value.
+            </summary>
+            <param name="request">The instance of <see cref="T:System.Net.Http.HttpRequestMessage"/>.</param>
+            <returns>The user agent string value.</returns>
+            <exception cref="T:System.ArgumentNullException">If the request is null, throw the ArgumentNullException.</exception>
+        </member>
+        <member name="M:Moe.Lib.Web.HttpUtils.GetUserAgent(System.Web.HttpContext)">
+            <summary>
+                Returns the user agent string value.
+            </summary>
+            <param name="httpContext">The instance of <see cref="T:System.Web.HttpContext"/>.</param>
+            <returns>The user agent string value.</returns>
+        </member>
+        <member name="M:Moe.Lib.Web.HttpUtils.GetUserHostAddress(System.Net.Http.HttpRequestMessage)">
+            <summary>
+                Returns the user host(ip) string value.
+            </summary>
+            <param name="request">The instance of <see cref="T:System.Net.Http.HttpRequestMessage"/>.</param>
+            <exception cref="T:System.ArgumentNullException">If the request is null, throw the ArgumentNullException.</exception>
+        </member>
+        <member name="M:Moe.Lib.Web.HttpUtils.GetUserHostAddress(System.Web.HttpContext)">
+            <summary>
+                Returns the user host(ip) string value.
+            </summary>
+            <param name="httpContext">The instance of <see cref="T:System.Web.HttpContext"/>.</param>
+        </member>
+        <member name="M:Moe.Lib.Web.HttpUtils.IsFrom(System.Web.HttpContext,System.String)">
+            <summary>
+                Determines whether the specified HTTP httpContext is from dev.
+            </summary>
+            <param name="httpContext">The HTTP httpContext.</param>
+            <param name="ipStartWith">The ip start with.</param>
+            <returns><c>true</c> if the specified HTTP httpContext is dev; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Moe.Lib.Web.HttpUtils.IsFrom(System.Net.Http.HttpRequestMessage,System.String)">
+            <summary>
+                Determines whether the specified HTTP httpContext is from dev.
+            </summary>
+            <param name="request">The request.</param>
+            <param name="ipStartWith">The ip start with.</param>
+            <returns><c>true</c> if the specified HTTP httpContext is dev; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Moe.Lib.Web.HttpUtils.IsFromIos(System.Net.Http.HttpRequestMessage)">
+            <summary>
+                Determines whether the specified request is from ios.
+            </summary>
+            <param name="request">The request.</param>
+            <returns><c>true</c> if the specified request is ios; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Moe.Lib.Web.HttpUtils.IsFromIos(System.Web.HttpContext)">
+            <summary>
+                Determines whether the specified request is from ios.
+            </summary>
+            <param name="httpContext">The HTTP httpContext.</param>
+            <returns><c>true</c> if the specified request is ios; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Moe.Lib.Web.HttpUtils.IsFromLocalhost(System.Net.Http.HttpRequestMessage)">
+            <summary>
+                Determines whether the specified HTTP httpContext is from localhost.
+            </summary>
+            <param name="request">The request.</param>
+            <returns><c>true</c> if the specified HTTP httpContext is localhost; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Moe.Lib.Web.HttpUtils.IsFromLocalhost(System.Web.HttpContext)">
+            <summary>
+                Determines whether the specified HTTP httpContext is from localhost.
+            </summary>
+            <param name="httpContext">The HTTP context.</param>
+            <returns><c>true</c> if the specified HTTP httpContext is localhost; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Moe.Lib.Web.HttpUtils.IsFromMobileBrowser(System.Web.HttpContext)">
+            <summary>
+                Determines whether the specified request is from mobile device.
+            </summary>
+            <param name="httpContext">The HTTP context.</param>
+            <returns><c>true</c> if the specified request is from mobile device; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Moe.Lib.Web.HttpUtils.IsFromMobileBrowser(System.Net.Http.HttpRequestMessage)">
+            <summary>
+                Determines whether the specified request is from mobile device.
+            </summary>
+            <param name="request">The request.</param>
+            <returns><c>true</c> if the specified request is from mobile device; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Moe.Lib.Web.HttpUtils.IsFromMobileDevice(System.Net.Http.HttpRequestMessage)">
+            <summary>
+                Determines whether the specified request is from mobile device.
+            </summary>
+            <param name="request">The request.</param>
+            <returns><c>true</c> if the specified request is from mobile device; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Moe.Lib.Web.HttpUtils.IsFromMobileDevice(System.Web.HttpContext)">
+            <summary>
+                Determines whether the specified request is from mobile device.
+            </summary>
+            <param name="httpContext">The HTTP context.</param>
+            <returns><c>true</c> if the specified request is from mobile device; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Moe.Lib.Web.HttpUtils.RedirectTo(System.Net.Http.HttpRequestMessage,System.String)">
+            <summary>
+                Redirects to.
+            </summary>
+            <param name="request">The request.</param>
+            <param name="uri">The URI.</param>
+            <returns>HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Moe.Lib.Web.HttpUtils.ToHttpContext(System.Web.HttpContextBase)">
+            <summary>
+                Gets the HTTP httpContext.
+            </summary>
+            <param name="httpContextBase">The HTTP context base.</param>
+            <returns>HttpContext.</returns>
+        </member>
+        <member name="M:Moe.Lib.Web.HttpUtils.ToHttpContext(System.Net.Http.HttpRequestMessage)">
+            <summary>
+                Gets the HTTP httpContext.
+            </summary>
+            <param name="request">The request.</param>
+            <returns>HttpContext.</returns>
+        </member>
+        <member name="M:Moe.Lib.Web.HttpUtils.ToHttpContextBase(System.Net.Http.HttpRequestMessage)">
+            <summary>
+                Gets the HTTP httpContext base.
+            </summary>
+            <param name="request">The request.</param>
+            <returns>HttpContextBase.</returns>
+        </member>
+        <member name="M:Moe.Lib.Web.HttpUtils.GetHttpContextBase(System.Net.Http.HttpRequestMessage)">
+            <summary>
+                Gets the HTTP httpContext base.
+            </summary>
+            <param name="request">The request.</param>
+            <returns>HttpContextBase.</returns>
+        </member>
+        <member name="M:Moe.Lib.Web.HttpUtils.RedirectTo(System.Net.Http.HttpRequestMessage,System.Uri)">
+            <summary>
+                Redirects to.
+            </summary>
+            <param name="request">The request.</param>
+            <param name="uri">The URI.</param>
+            <returns>HttpResponseMessage.</returns>
+        </member>
+        <member name="T:Moe.Lib.Web.IOrderedFilter">
+            <summary>
+                Interface IOrderedFilter
+            </summary>
+        </member>
+        <member name="P:Moe.Lib.Web.IOrderedFilter.Order">
+            <summary>
+                Gets or sets the order.
+            </summary>
+            <value>The order.</value>
+        </member>
+        <member name="T:Moe.Lib.Web.OrderedActionFilterAttribute">
+            <summary>
+                Class OrderedActionFilterAttribute.
+            </summary>
+        </member>
+        <member name="P:Moe.Lib.Web.OrderedActionFilterAttribute.Order">
+            <summary>
+                Gets or sets the order.
+            </summary>
+            <value>The order.</value>
+        </member>
+        <member name="T:Moe.Lib.Web.OrderedAuthenticationFilterAttribute">
+            <summary>
+                OrderedAuthenticationFilterAttribute.
+            </summary>
+        </member>
+        <member name="M:Moe.Lib.Web.OrderedAuthenticationFilterAttribute.AuthenticateAsync(System.Web.Http.Filters.HttpAuthenticationContext,System.Threading.CancellationToken)">
+            <summary>
+                Authenticates the request.
+            </summary>
+            <param name="context">The authentication context.</param>
+            <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+            <returns>A Task that will perform authentication.</returns>
+        </member>
+        <member name="M:Moe.Lib.Web.OrderedAuthenticationFilterAttribute.ChallengeAsync(System.Web.Http.Filters.HttpAuthenticationChallengeContext,System.Threading.CancellationToken)">
+            <summary>
+                Challenges the asynchronous.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="cancellationToken">The cancellation token.</param>
+            <returns>Task.</returns>
+        </member>
+        <member name="P:Moe.Lib.Web.OrderedAuthenticationFilterAttribute.Order">
+            <summary>
+                Gets or sets the order.
+            </summary>
+            <value>The order.</value>
+        </member>
+        <member name="T:Moe.Lib.Web.OrderedAuthorizationFilterAttribute">
+            <summary>
+                Class OrderedAuthorizationFilterAttribute.
+            </summary>
+        </member>
+        <member name="P:Moe.Lib.Web.OrderedAuthorizationFilterAttribute.Order">
+            <summary>
+                Gets or sets the order.
+            </summary>
+            <value>The order.</value>
+        </member>
+        <member name="T:Moe.Lib.Web.OrderedExceptionFilterAttribute">
+            <summary>
+                Class OrderedExceptionFilterAttribute.
+            </summary>
+        </member>
+        <member name="P:Moe.Lib.Web.OrderedExceptionFilterAttribute.Order">
+            <summary>
+                Gets or sets the order.
+            </summary>
+            <value>The order.</value>
+        </member>
+        <member name="T:Moe.Lib.Web.JsonRequestMessage">
+            <summary>
+                Class JsonRequestMessage.
+            </summary>
+        </member>
+        <member name="P:Moe.Lib.Web.JsonRequestMessage.Method">
+            <summary>
+                Gets or sets the method.
+            </summary>
+            <value>The method.</value>
+        </member>
+        <member name="P:Moe.Lib.Web.JsonRequestMessage.RelativeUrl">
+            <summary>
+                Gets or sets the relative URL.
+            </summary>
+            <value>The relative URL.</value>
+        </member>
+        <member name="T:Moe.Lib.Web.JsonResponseMessage">
+            <summary>
+                Class JsonResponseMessage.
+            </summary>
+        </member>
+        <member name="M:Moe.Lib.Web.JsonResponseMessage.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="T:Moe.Lib.Web.JsonResponseMessage" /> class.
+            </summary>
+        </member>
+        <member name="P:Moe.Lib.Web.JsonResponseMessage.Code">
+            <summary>
+                Gets or sets the code.
+            </summary>
+            <value>The code.</value>
+        </member>
+        <member name="P:Moe.Lib.Web.JsonResponseMessage.Headers">
+            <summary>
+                Gets or sets the headers.
+            </summary>
+            <value>The headers.</value>
+        </member>
+        <member name="T:Moe.Lib.Web.OrderedFilterProvider">
+            <summary>
+                Class OrderedFilterProvider.
+            </summary>
+        </member>
+        <member name="M:Moe.Lib.Web.OrderedFilterProvider.GetFilters(System.Web.Http.HttpConfiguration,System.Web.Http.Controllers.HttpActionDescriptor)">
+            <summary>
+                Gets the filters.
+            </summary>
+            <param name="configuration">The configuration.</param>
+            <param name="actionDescriptor">The action descriptor.</param>
+            <returns>IEnumerable&lt;FilterInfo&gt;.</returns>
+        </member>
+        <member name="M:Moe.Lib.Web.OrderedFilterProvider.OrderFilters(System.Collections.Generic.IEnumerable{System.Web.Http.Filters.IFilter},System.Web.Http.Filters.FilterScope)">
+            <summary>
+                Orders the filters.
+            </summary>
+            <param name="filters">The filters.</param>
+            <param name="scope">The scope.</param>
+            <returns>IEnumerable&lt;FilterInfo&gt;.</returns>
+        </member>
+        <member name="T:Moe.Lib.TransientFaultHandling.HttpRequestTransientErrorDetectionStrategy">
+            <summary>
+                Transient error detection strategy for http communication between clients and servers.
+            </summary>
+        </member>
+        <member name="M:Moe.Lib.TransientFaultHandling.HttpRequestTransientErrorDetectionStrategy.IsTransient(System.Exception)">
+            <summary>
+                Determines whether the specified exception represents a transient failure that can be compensated by a retry.
+            </summary>
+            <param name="ex">The exception object to be verified.</param>
+            <returns>
+                <c>true</c> if the specified exception is considered as transient; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="T:MoeLib.Web.HttpRequestMessageExtensions">
+            <summary>
+                Extends the HttpRequestMessage.
+            </summary>
+        </member>
+        <member name="M:MoeLib.Web.HttpRequestMessageExtensions.GetCookie(System.Net.Http.HttpRequestMessage,System.String)">
+            <summary>
+                Returns an individual cookie from the cookies collection.
+            </summary>
+            <param name="request">The instance of <see cref="T:System.Net.Http.HttpRequestMessage" />.</param>
+            <param name="cookieName">The name of the cookie.</param>
+            <returns>The cookie value. Return null if the cookie does not exist.</returns>
+            <exception cref="T:System.ArgumentNullException">If the request is null, throw the ArgumentNullException.</exception>
+            <exception cref="T:System.ArgumentNullException">If the cookieName is null, throw the ArgumentNullException.</exception>
+        </member>
+        <member name="M:MoeLib.Web.HttpRequestMessageExtensions.GetHeader(System.Net.Http.HttpRequestMessage,System.String)">
+            <summary>
+                Returns an individual HTTP Header value that joins all the header value with ' '.
+            </summary>
+            <param name="request">The instance of <see cref="T:System.Net.Http.HttpRequestMessage" />.</param>
+            <param name="key">The key of the header.</param>
+            <returns>The HTTP Header value that joins all the header value with ' '. Return null if the header does not exist.</returns>
+            <exception cref="T:System.ArgumentNullException">If the request is null, throw the ArgumentNullException.</exception>
+            <exception cref="T:System.ArgumentNullException">If the key is null, throw the ArgumentNullException.</exception>
+        </member>
+        <member name="M:MoeLib.Web.HttpRequestMessageExtensions.GetQueryString(System.Net.Http.HttpRequestMessage,System.String)">
+            <summary>
+                Returns an individual querystring value.
+            </summary>
+            <param name="request">The instance of <see cref="T:System.Net.Http.HttpRequestMessage" />.</param>
+            <param name="key">The key.</param>
+            <returns>The querystring value. Return null if the querystring does not exist.</returns>
+            <exception cref="T:System.ArgumentNullException">If the request is null, throw the ArgumentNullException.</exception>
+            <exception cref="T:System.ArgumentNullException">If the key is null, throw the ArgumentNullException.</exception>
+        </member>
+        <member name="M:MoeLib.Web.HttpRequestMessageExtensions.GetQueryStrings(System.Net.Http.HttpRequestMessage)">
+            <summary>
+                Returns a dictionary of QueryStrings that's easier to work with
+                than GetQueryNameValuePairs KevValuePairs collection.
+                If you need to pull a few single values use GetQueryString instead.
+            </summary>
+            <param name="request">The instance of <see cref="T:System.Net.Http.HttpRequestMessage" />.</param>
+            <returns>The QueryStrings dictionary.</returns>
+            <exception cref="T:System.ArgumentNullException">If the request is null, throw the ArgumentNullException.</exception>
+        </member>
+        <member name="M:MoeLib.Web.HttpRequestMessageExtensions.GetUserAgent(System.Net.Http.HttpRequestMessage)">
+            <summary>
+                Returns the user agent string value.
+            </summary>
+            <param name="request">The instance of <see cref="T:System.Net.Http.HttpRequestMessage" />.</param>
+            <exception cref="T:System.ArgumentNullException">If the request is null, throw the ArgumentNullException.</exception>
+        </member>
+        <member name="M:MoeLib.Web.HttpRequestMessageExtensions.GetUserHostAddress(System.Net.Http.HttpRequestMessage)">
+            <summary>
+                Returns the user host(ip) string value.
+            </summary>
+            <param name="request">The instance of <see cref="T:System.Net.Http.HttpRequestMessage" />.</param>
+            <exception cref="T:System.ArgumentNullException">If the request is null, throw the ArgumentNullException.</exception>
+        </member>
+        <member name="T:MoeLib.Web.MoeApiController">
+            <summary>
+                MoeApiController.
+            </summary>
+        </member>
+        <member name="P:MoeLib.Web.MoeApiController.Logger">
+            <summary>
+                Gets the logger.
+            </summary>
+            <value>The logger.</value>
+        </member>
+    </members>
+</doc>

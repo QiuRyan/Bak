@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ServiceDefinition name="Jinyinmao.MessageManager.CloudService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2015-04.2.6">
+  <WebRole name="Jinyinmao.MessageManager.Api" vmsize="Small">
+    <Sites>
+      <Site name="Web">
+        <Bindings>
+          <Binding name="Endpoint1" endpointName="HTTP" />
+          <Binding name="Endpoint1" endpointName="HTTPS" />
+        </Bindings>
+      </Site>
+    </Sites>
+    <ConfigurationSettings>
+      <Setting name="AppKeys" />
+      <Setting name="Env" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
+    </ConfigurationSettings>
+    <Endpoints>
+      <InputEndpoint name="HTTP" protocol="http" port="80" />
+      <InputEndpoint name="HTTPS" protocol="https" port="443" certificate="JinyinmaoSSL" />
+    </Endpoints>
+    <Imports>
+      <Import moduleName="RemoteAccess" />
+      <Import moduleName="RemoteForwarder" />
+    </Imports>
+    <Certificates>
+      <Certificate name="JinyinmaoSSL" storeLocation="LocalMachine" storeName="My" />
+    </Certificates>
+  </WebRole>
+</ServiceDefinition>

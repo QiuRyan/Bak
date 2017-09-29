@@ -1,0 +1,45 @@
+1. Batch Script 
+Daemon/BuildScripts/prebuild.bat
+Modify Environment
+Advanced: Fail on Standard Error
+Control Options: Enabled Always Run
+
+2. PowerShell 
+Daemon/BuildScripts/prebuild.ps1
+Advanced: Working folder: Daemon/Grunt 
+Control Options: Enabled
+
+3. NuGet Installer 
+Daemon/Source/Jinyinmao.Daemon.sln
+Advanced: Working folder: Daemon/Grunt 
+Control Options: Enabled
+
+4. VisualStudioBuild 
+Daemon/Source/Jinyinmao.Daemon.CloudService/Jinyinmao.Daemon.CloudService.ccproj 
+/t:Publish /p:TargetProfile=Cloud /p:PublishDir=$(Build.SourcesDirectory)\Daemon\Release\$(Build.SourceVersion)\Daemon\DevTest
+AnyCPU 
+Cloud
+Visual Studio: Latest
+MSBuild: Latest x64
+Record Project Details: Enable
+Control Options: Enabled
+
+6. PowerShell
+Daemon/BuildScripts/upgradeCloudServiceSize.ps1
+Advanced: Working folder: Daemon/Grunt 
+Control Options: Enabled
+
+7. VisualStudioBuild
+Daemon/Source/Jinyinmao.Daemon.CloudService/Jinyinmao.Daemon.CloudService.ccproj 
+/t:Publish /p:TargetProfile=Cloud /p:PublishDir=$(Build.SourcesDirectory)\Daemon\Release\$(Build.SourceVersion)\Daemon\Product
+AnyCPU 
+Cloud
+Visual Studio: Latest
+MSBuild: Latest x64
+Record Project Details: Enable
+Control Options: Enabled
+
+9. PowerShell
+Daemon/BuildScripts/postbuild.ps1
+Advanced: Working folder: Daemon/Grunt 
+Control Options: Enabled Continue on Error Always Run

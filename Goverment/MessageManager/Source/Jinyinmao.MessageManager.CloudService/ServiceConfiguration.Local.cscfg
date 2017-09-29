@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ServiceConfiguration serviceName="Jinyinmao.MessageManager.CloudService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2015-04.2.6">
+  <Role name="Jinyinmao.MessageManager.Api">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="AppKeys" value="&amp;lt;RSAKeyValue&amp;gt;&amp;lt;Modulus&amp;gt;x0PiBBC1nErsgvpcN5B6G86tJiNiCbGZbLwRF7WpmAWfTcVRigTEIlgliHdZ1oRSbKAipjqlh7cL32ue3uuL3Oc1ffv7P+9BfzbXCBy8L6NXcKfq3uxF5p7Jt0q9ZR408Z3MLRHIq5V2jntnZVid7Q311p6YVOk2gzquuzPpy9Q0Q0HTL6uj58GP5y0/Px+6sBo2Rjonboug8a+ZTpWAT1UnG6ZJP7sjNVYs0z9HrN+0lDOJE5DldTu0xssqkNUa/FZCqH86BlvMKr37iZ5yn9sccWexfflj9S/Jr4JXZ0X5+ADzlSBWvw9EbgsKgtJf2t0gFFnJGjhA4+TLqeaZqQ==&amp;lt;/Modulus&amp;gt;&amp;lt;Exponent&amp;gt;AQAB&amp;lt;/Exponent&amp;gt;&amp;lt;P&amp;gt;06jUS+4kM9auDTbTCLTfn3WsRW403P129fRNhmZVNvQvUoaPVRmjZYA+N4oz3q+JwRSyg0qWZlslmsGxYZOXili7V1qgkcGiQwjP5xRlErCiA+sWLWTklegoPSnktJvMXxkm9Ct5vG9TufEKGgZt7w3E2v+k7oX5jCgkZ6kFHaU=&amp;lt;/P&amp;gt;&amp;lt;Q&amp;gt;8QJahIaLQff3PCGsUHA9TOAw4WG9D4B0RLiO81jbqq/SU7DRlqdUDa92wCSQjRgFYh1qc/IwlGjbfKVzW13BUviouTLPUqplgFTr5nH/1MEtdaXjIOVTDToaLxbOOZ6IpCee/oP0lV6SzHCJF0pWMmGbjQ2MntEjGa/L2RUM1LU=&amp;lt;/Q&amp;gt;&amp;lt;DP&amp;gt;SZsx0QINFvX2a2QAecuk5OhgM3kC60M+BoSiHTYjNkwu1M00tUyINTkm6dum9C8pgbr35Y6fxRK3fh0T2bIhBhybceJzapzjF9rNqje+eoRwo1oyyTCICdXFgJe8EE8KAJxXnpwr5qr0e/pmH+zSeErahapXqhdvVB11o5L0030=&amp;lt;/DP&amp;gt;&amp;lt;DQ&amp;gt;7l9ZkAJS8iiDjCHyAI1C1CpZrlGxYQe399Bi8yVL/wJvkP8uDUfqxq5pUZnYrvS3PlfB1nQQwHkFvb8W3aNZdusiVip/DFAknE1iFUdjtdZrVBWDFCI9hrOU+kYgKrU2iMX3Z9yzqJklsLcNoM+Rebs40sY380z+3oUVpdxAGJE=&amp;lt;/DQ&amp;gt;&amp;lt;InverseQ&amp;gt;c5fTaoYYT36xG4VMqmcLdNhb6aIcn8E6GmusO51gyQ6b9TNeA47HyTB5c8g0mzwDZjCvuwKstGzlcgV8HqIQkP5dbuTM+XHMdj8q6Q4LLmPaT/XBXBBqeXDKAvD1HTYCaDqy+Z4TXI0ss4N1psYEJ/0kEAZCZcmagKoYVQjnBD8=&amp;lt;/InverseQ&amp;gt;&amp;lt;D&amp;gt;AcnwjSbKlT+a8JtnbobugbIQ8zGyyfF9NhuuGkS4OV7Q4krY2OCtaL2FK2d0OAJyFvriX2mms27c6Bbi6I9mxFyS/1w0EjaHTlQOCXWbPuDm17e6L7bL8y5jvdspk28k/IefyJvLQwxmxxABNUi0Cj0WLY9jlgeN72RRzekWZTewvBsXlYQkCc0A2SZjKsKcWvUHXtbL01MtTTA0Aqky6h4oHw8nBWH5AjlDQojpJnLbC0K2m8iuQa8MBfV22yKrZGMjjgNM5RjHXMfIj/YungLeux236EQKA3ARZv2XrR6bUw5wNfUA1Fq68gkKuxyjn3q8JYb377V0u95od4YuMQ==&amp;lt;/D&amp;gt;&amp;lt;/RSAKeyValue&amp;gt;" />
+      <Setting name="Env" value="Dev" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="BlobEndpoint=https://jymstoredev.blob.core.chinacloudapi.cn/;QueueEndpoint=https://jymstoredev.queue.core.chinacloudapi.cn/;TableEndpoint=https://jymstoredev.table.core.chinacloudapi.cn/;AccountName=jymstoredev;AccountKey=1dCLRLeIeUlLAIBsS9rYdCyFg3UNU239MkwzNOj3BYbREOlnBmM4kfTPrgvKDhSmh6sRp2MdkEYJTv4Ht3fCcg==" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="jym-remote" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBpQYJKoZIhvcNAQcDoIIBljCCAZICAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCED8ZTWrIZ6qzTYTY0pgrKkQwDQYJKoZIhvcNAQEBBQAEggEAoM3PQtucP+247OTrM7Q5dj/twUV6cOS6RUp4RVqGU0fb7IqDQ6W0IMYty3CVL9EObZgPK3lsukhLylYO6uVT0EggLDM8OzADP64GeCLmhk0zV7GFyIaqjFvwVwJJnS2U95kRS3Y1qYav1JWRv//EhkK2uCcb4eqLdKwsssEim6tvfcfxN4cmIRDNrmd/LT2tzX5crytUabj3kMzysBsruPMHkMkPgydII8fi+rsDCflyA36R300hpJjsH06WLuFXqv4F/KbNzatDzQdtAJVj028+mBUx2Yhis1WQ+DQVIslV49th0cO0gSaAkaVDtsR1opi+wvaMW1YoyFnNl7K2BjA7BgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECGjPHjaUEHuagBgMX4CN0nOh6i5VaC1gKp0mP/YbEemZKMs=" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2017-01-01T23:59:59.0000000+08:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="EAEBC85D3723BAF21E6E7926F150C0CE39D299C7" thumbprintAlgorithm="sha1" />
+      <Certificate name="JinyinmaoSSL" thumbprint="EAEBC85D3723BAF21E6E7926F150C0CE39D299C7" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+</ServiceConfiguration>

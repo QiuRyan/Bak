@@ -1,0 +1,86 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.8
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02Service", "02Service", "{7A52D4EB-A4D2-4A3A-AD65-03100B147D6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jinyinmao.Signature.Service", "jinyinmao.Signature.Service\jinyinmao.Signature.Service.csproj", "{7B70967D-DB1C-494D-8A75-949C7191C1E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jinyinmao.Signature.lib", "jinyinmao.Signature.lib\jinyinmao.Signature.lib.csproj", "{EA55F392-0C6A-4C7D-88F9-AC99DF3612A7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03Lib", "03Lib", "{F6AE93DE-B92D-4003-8BD8-854D9F303BE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jinyinmao.Signature.Tools", "Jinyinmao.Signature.Tools\Jinyinmao.Signature.Tools.csproj", "{82C3B6BB-4E97-4965-9871-0CA7E75918E3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{074A2E85-3861-4E1D-9E60-547CF5781926}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JYM-SignatureContract", "JYM-SignatureContract\JYM-SignatureContract.csproj", "{C88BA418-7217-4A29-A0E7-9D8CFE01BA85}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01WinService", "01WinService", "{C1D68CF1-FA0D-4EB8-9785-C233F2C395CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{8EF7B8E1-B8E1-457A-A1D4-22D06D3BDB13}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7B70967D-DB1C-494D-8A75-949C7191C1E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B70967D-DB1C-494D-8A75-949C7191C1E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B70967D-DB1C-494D-8A75-949C7191C1E8}.Debug|x86.ActiveCfg = Debug|x86
+		{7B70967D-DB1C-494D-8A75-949C7191C1E8}.Debug|x86.Build.0 = Debug|x86
+		{7B70967D-DB1C-494D-8A75-949C7191C1E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B70967D-DB1C-494D-8A75-949C7191C1E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B70967D-DB1C-494D-8A75-949C7191C1E8}.Release|x86.ActiveCfg = Release|x86
+		{7B70967D-DB1C-494D-8A75-949C7191C1E8}.Release|x86.Build.0 = Release|x86
+		{EA55F392-0C6A-4C7D-88F9-AC99DF3612A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA55F392-0C6A-4C7D-88F9-AC99DF3612A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA55F392-0C6A-4C7D-88F9-AC99DF3612A7}.Debug|x86.ActiveCfg = Debug|x86
+		{EA55F392-0C6A-4C7D-88F9-AC99DF3612A7}.Debug|x86.Build.0 = Debug|x86
+		{EA55F392-0C6A-4C7D-88F9-AC99DF3612A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA55F392-0C6A-4C7D-88F9-AC99DF3612A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA55F392-0C6A-4C7D-88F9-AC99DF3612A7}.Release|x86.ActiveCfg = Release|x86
+		{EA55F392-0C6A-4C7D-88F9-AC99DF3612A7}.Release|x86.Build.0 = Release|x86
+		{82C3B6BB-4E97-4965-9871-0CA7E75918E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82C3B6BB-4E97-4965-9871-0CA7E75918E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82C3B6BB-4E97-4965-9871-0CA7E75918E3}.Debug|x86.ActiveCfg = Debug|x86
+		{82C3B6BB-4E97-4965-9871-0CA7E75918E3}.Debug|x86.Build.0 = Debug|x86
+		{82C3B6BB-4E97-4965-9871-0CA7E75918E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82C3B6BB-4E97-4965-9871-0CA7E75918E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82C3B6BB-4E97-4965-9871-0CA7E75918E3}.Release|x86.ActiveCfg = Release|x86
+		{82C3B6BB-4E97-4965-9871-0CA7E75918E3}.Release|x86.Build.0 = Release|x86
+		{C88BA418-7217-4A29-A0E7-9D8CFE01BA85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C88BA418-7217-4A29-A0E7-9D8CFE01BA85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C88BA418-7217-4A29-A0E7-9D8CFE01BA85}.Debug|x86.ActiveCfg = Debug|x86
+		{C88BA418-7217-4A29-A0E7-9D8CFE01BA85}.Debug|x86.Build.0 = Debug|x86
+		{C88BA418-7217-4A29-A0E7-9D8CFE01BA85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C88BA418-7217-4A29-A0E7-9D8CFE01BA85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C88BA418-7217-4A29-A0E7-9D8CFE01BA85}.Release|x86.ActiveCfg = Release|x86
+		{C88BA418-7217-4A29-A0E7-9D8CFE01BA85}.Release|x86.Build.0 = Release|x86
+		{8EF7B8E1-B8E1-457A-A1D4-22D06D3BDB13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EF7B8E1-B8E1-457A-A1D4-22D06D3BDB13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EF7B8E1-B8E1-457A-A1D4-22D06D3BDB13}.Debug|x86.ActiveCfg = Debug|x86
+		{8EF7B8E1-B8E1-457A-A1D4-22D06D3BDB13}.Debug|x86.Build.0 = Debug|x86
+		{8EF7B8E1-B8E1-457A-A1D4-22D06D3BDB13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EF7B8E1-B8E1-457A-A1D4-22D06D3BDB13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EF7B8E1-B8E1-457A-A1D4-22D06D3BDB13}.Release|x86.ActiveCfg = Release|x86
+		{8EF7B8E1-B8E1-457A-A1D4-22D06D3BDB13}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7B70967D-DB1C-494D-8A75-949C7191C1E8} = {7A52D4EB-A4D2-4A3A-AD65-03100B147D6E}
+		{EA55F392-0C6A-4C7D-88F9-AC99DF3612A7} = {F6AE93DE-B92D-4003-8BD8-854D9F303BE5}
+		{82C3B6BB-4E97-4965-9871-0CA7E75918E3} = {074A2E85-3861-4E1D-9E60-547CF5781926}
+		{C88BA418-7217-4A29-A0E7-9D8CFE01BA85} = {C1D68CF1-FA0D-4EB8-9785-C233F2C395CD}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A60D08BB-944A-468B-9247-98F54120B777}
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="Jinyinmao.Deposit.CloudService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2015-04.2.6">
+  <Role name="Jinyinmao.Deposit">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="Microsoft.ServiceBus.ConnectionString" value="Endpoint=sb://[your namespace].servicebus.windows.net;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=[your key]" />
+      <Setting name="AppKeys" value="&lt;RSAKeyValue&gt;&lt;Modulus&gt;u5OwO22WwBaGHXekuS0kn71rVMIVibB5GfHoZRigRYkjleNM06FM9ulJP0/DLgJopnHuRJhwXUe4u8ngfTuK1P7B57YmDPutxdCkNUWObB4nIKbS7dCHzxqdFVDZyrn8eqS4WQCGDwEmZowAKM8PmKG8EIAF9tDEnwzPkE+0mLOBZg3ohdO5vkmMjMjNsoqn68IomE7+GRrZ2AlZkL1mDkwphXFDYxj55x/y9OJLHYgShB9nk+/GxjcUak9CiH2Z6/PvSDOUvFF3z2eGf0ccPQDQpk0ILjsYK01DyxB2gPvMPC6fIXS7NvKDj5NTiZEhQ+dTp49V3sJjf+2IxE7mqQ==&lt;/Modulus&gt;&lt;Exponent&gt;AQAB&lt;/Exponent&gt;&lt;P&gt;vB2ZG1pvp6oSnA3G0bafoJS3mW3pMgyV8QrYs16HoPe2yd4FlJIJI9ZcmBaw2w8EwxTHY8l+xmwxAc+dfMZEpx4VJASc5+xj613aibBVHIkmRSYyWXrc2Vafh3lhIh9WqDOOj5lfzft6sOwSq3bbMNX/XxExOsl72J86lavb8ks=&lt;/P&gt;&lt;Q&gt;/0RS0vpJ0wKI2srwstYYUJJofk21/O7msAqahDeBzAEWm+31L07IUxBk6eWxjmMvyeUxj+lIaaJfwV7G23R3jZodwThjv+RDDhFdpBbKyHeUBeI0vC0KY74Mw8tsh0yPeYBMz21v98tHdxRbBA8zOLumnVfzmX90iqw2ROgzkls=&lt;/Q&gt;&lt;DP&gt;q+agMs7BmYVg3Bn6xUkNNcCwxhQaNRIrMsmmnMKVThMPhgjNMKcCky0gEBssIgHnaB1k11sZ7liPsAf48jx8H/rtdqyAda8e38Y0Hf50yE7MGgR9nicYCcOOpE3W5Ued+LakX7TYR3K2+1W++dDzG/1yD322bvIPqjRXZM5Xf2E=&lt;/DP&gt;&lt;DQ&gt;E65z6Fpt6LwQSzZMeq1xMH0pW1uohXjyBm663SjedBk9YgZl2iDr5yOjdDlGiGDzZVCrkpn9AFAJrAIfuPnw4dUZKDWt0zTJSsNiAe3T8sLtgcqgIEYkv+3+U/ZSRthLU6XlxjR85pEg0HicT+LQIzassQMAADzIgoymnod8unM=&lt;/DQ&gt;&lt;InverseQ&gt;pm8KwOFcmTb63xCqAQHRvH8MUSAaolJ3CIWhA8I4uvFleQ3RwQ5BuLDrV/L/EeWr+3xm2LfMFL2KVSTeVkcWWGlnetEdoyPzYYb0wAlTd9rRQY7ksJfy6yS0SLkOrUJn6nJiUka/pGU2PVnnIHaCAFXYrogT8FDFRWm0ylLI1z8=&lt;/InverseQ&gt;&lt;D&gt;CK6t3hpU+4AvZgbHM6EQzGoOoUY4i/6EpHxLhv5sULunz4TNZhBVySoEL2+IN8V5xZaJclhh/xdWSC7weqt6YiCGpiyKt1gg84KUTzjwfjWpFvxR0BsyZhYzxixPYHBabOzZ8ZiyG9iwR9fcHAd1j9mQpGzgmcuRBlGn++SMlfLImSFffM1btPxLWeHg8mS9+/0KbcSfgB32P5+GZB3XfjS3Z4rCHSwlNquobAAzWGRNzpa4D2h7DXYf1Xeqr72vawVY6yrIx6HFJruaTi/WgS48ehION0SDZBlAV6qY5oxxr8y2r2UKTU6XtlkGLflrek9G9AcnB2HIi6VnxKjyZw==&lt;/D&gt;&lt;/RSAKeyValue&gt;" />
+      <Setting name="Env" value="Dev" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="jym-remote" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBpQYJKoZIhvcNAQcDoIIBljCCAZICAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEC+Vr5FI0mWKRZu4xoFkZoMwDQYJKoZIhvcNAQEBBQAEggEAmoleJ3XxYdzB5BN/pSC9APKcreKEUG7u2MYTWsP876VokPBbCqgGRe4qRqx0oCOoX9UUyWquFgTAuzMnF1hZKNlqaQopxwvrxlCySyZeNNSoojMUpi1czt3VwV36dT2LP8RxGfBrJyBTLmw0m/VCV400/mjpFt5AGmeiqYX5dDLq/AlQ2LIhR5hv57IDtXvJSbG14Asfnr7JuhrzkLNv0Mu5oIsnh/OFx/MwwI1pasMty2gItXp/WM3iCEamqCyDfjng5Nzw1leAEOHYei8JIGAvOxGCMbHaUN5Z297v3ZS9hOdAEjXy/urJZp3dydh+gBuFNx7y34I59ayxK6pVeTA7BgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECGfPDL/+Pto1gBi025Z1ZnCRGz4lAERofp00nmFQzj4Lrtc=" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2018-08-10T23:59:59.0000000+08:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="935AFF0B1BCE410B3621ABED06D4508DA150B9F8" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+</ServiceConfiguration>

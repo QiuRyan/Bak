@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="Jinyinmao.Daemon.CloudService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2015-04.2.6">
+  <Role name="Jinyinmao.Daemon">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="BlobEndpoint=https://jymstoredev.blob.core.chinacloudapi.cn/;QueueEndpoint=https://jymstoredev.queue.core.chinacloudapi.cn/;TableEndpoint=https://jymstoredev.table.core.chinacloudapi.cn/;AccountName=jymstoredev;AccountKey=1dCLRLeIeUlLAIBsS9rYdCyFg3UNU239MkwzNOj3BYbREOlnBmM4kfTPrgvKDhSmh6sRp2MdkEYJTv4Ht3fCcg==" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="jym-remote" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBpQYJKoZIhvcNAQcDoIIBljCCAZICAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEHzlGHqaJbGSQdY4oXNVPMcwDQYJKoZIhvcNAQEBBQAEggEAGtjxSBjVWoTEYqzN9BCDv2+fw8BC78FUv4SuqYohhtqvpIi9HtOFaRvYUF8Io+H6Kh+E8ovS0C4CC526Obz//oRQ5fnlh6TfxmE+3C23Lm/+Dwr+DNNB2t4RU3qpsUDEVZgVFzKJZJ6oO4gAcEZw4+00hngDJ3m0IgmZGE5Ulzks1Nz9q4/VWHRewXeIjMvpS+XlsBihGBJciY7F5GPD/vb7/HvLYtf/7sriBFnGcllHGxQLv1HpJAnY4kz7c87Jul48x6DLt0fDzbHZ32moOBSP8hIhaEIjz32H0WnkhEg/tnhX2i4/6U5mIK+E9gKWhERRiuftEXGX5EE5SB0KSzA7BgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECJwz/4ZXMMnYgBgzYBOjXTixj0APKP+WRIVmqL4cc7/r6v0=" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2018-09-20T23:59:59.0000000+08:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+      <Setting name="ApiInstanseIps" value="jym-dev-api.jinyinmao.com.cn" />
+      <Setting name="ApiHost" value="http://jym-dev-api.jinyinmao.com.cn/" />
+      <Setting name="DaemonDBConnectionString" value="Server=tcp:payment.db.dev.ad.jinyinmao.com.cn,1433;Database=jym-daemon;User ID=db-user-front;Password=0SmDXp8i7MRfg29HJk1N;Trusted_Connection=False;Connection Timeout=120;" />
+      <Setting name="JYMDBContextConnectionString" value="Server=tcp:payment.db.dev.ad.jinyinmao.com.cn,1433;Database=jym-biz;User ID=db-user-front;Password=0SmDXp8i7MRfg29HJk1N;Trusted_Connection=False;Connection Timeout=120;" />
+      <Setting name="StorageProviderConnectionString" value="Server=tcp:flnpkc8fj6.database.chinacloudapi.cn,1433;Database=jym-grains-{0};User ID=db-user-front@flnpkc8fj6;Password=0SmDXp8i7MRfg29HJk1N;Trusted_Connection=False;Encrypt=false;Connection Timeout=120;" />
+      <Setting name="StorageConnectionString" value="BlobEndpoint=https://jymstoredev.blob.core.chinacloudapi.cn/;QueueEndpoint=https://jymstoredev.queue.core.chinacloudapi.cn/;TableEndpoint=https://jymstoredev.table.core.chinacloudapi.cn/;AccountName=jymstoredev;AccountKey=1dCLRLeIeUlLAIBsS9rYdCyFg3UNU239MkwzNOj3BYbREOlnBmM4kfTPrgvKDhSmh6sRp2MdkEYJTv4Ht3fCcg==" />
+      <Setting name="PaymentApiHost" value="http://payment.dev.ad.jinyinmao.com.cn/" />
+      <Setting name="JYMPaymentConnectionString" value="Server=tcp:payment.db.dev.ad.jinyinmao.com.cn,1433;Database=jym-payment;User ID=db-user-front;Password=0SmDXp8i7MRfg29HJk1N;Trusted_Connection=False;Connection Timeout=120;" />
+      <Setting name="TotalThreadNum" value="10" />
+      <Setting name="CouponApiHost" value="http://jym-dev-coupon.jinyinmao.com.cn/" />
+      <Setting name="HistoryHours" value="1" />
+      <Setting name="JYMDBAuthContextConnectionString" value="Server=tcp:payment.db.dev.ad.jinyinmao.com.cn,1433;Database=jym-auth;User ID=db-user-front;Password=0SmDXp8i7MRfg29HJk1N;Trusted_Connection=False;Connection Timeout=120;" />
+      <Setting name="JYMDBMemberContextConnectionString" value="Server=tcp:payment.db.dev.ad.jinyinmao.com.cn,1433;Database=jym-member;User ID=db-user-front;Password=0SmDXp8i7MRfg29HJk1N;Trusted_Connection=False;Connection Timeout=120;" />
+      <Setting name="MemberApiHost" value="http://jym-dev-member.jinyinmao.com.cn/" />
+      <Setting name="GatewayHost" value="http://devs.chinaeast.cloudapp.chinacloudapi.cn" />
+      <Setting name="JYMMarketingIdentifier" value="83942ED9CBC94D3BA24594E76DB6FD82" />
+      <Setting name="JYMMigrateMaxAmount" value="100000" />
+      <Setting name="AllowedIps" value="10.1.10.117,10.1.10.102" />
+      <Setting name="ExceptionlessServerUrl" value="http://exceptionless.dev.ad.jinyinmao.com.cn/" />
+      <Setting name="ExceptionlessKey" value="CKvJAODYAcR90S3vpyn6jiEvAKCrSCL1tc1G8VPt" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="AAFDE2B55CA43862FFA564B0CCD5E9AB231D0CF1" thumbprintAlgorithm="sha1" />
+      <Certificate name="SSLCertificate" thumbprint="935AFF0B1BCE410B3621ABED06D4508DA150B9F8" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+  <NetworkConfiguration>
+    <VirtualNetworkSite name="VPN-dev" />
+    <AddressAssignments>
+      <InstanceAddress roleName="Jinyinmao.Daemon">
+        <Subnets>
+          <Subnet name="Subnet-web" />
+        </Subnets>
+      </InstanceAddress>
+    </AddressAssignments>
+  </NetworkConfiguration>
+</ServiceConfiguration>

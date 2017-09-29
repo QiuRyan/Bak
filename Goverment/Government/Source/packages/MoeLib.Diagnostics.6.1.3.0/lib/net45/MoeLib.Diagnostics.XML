@@ -1,0 +1,370 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MoeLib.Diagnostics</name>
+    </assembly>
+    <members>
+        <member name="T:MoeLib.Diagnostics.LogEntry">
+            <summary>
+                LogEntry.
+            </summary>
+        </member>
+        <member name="P:MoeLib.Diagnostics.LogEntry.DeploymentId">
+            <summary>
+                Gets or sets the deployment identifier.
+            </summary>
+            <value>The deployment identifier.</value>
+        </member>
+        <member name="P:MoeLib.Diagnostics.LogEntry.ErrorCode">
+            <summary>
+                Gets or sets the error code.
+            </summary>
+            <value>The error code.</value>
+        </member>
+        <member name="P:MoeLib.Diagnostics.LogEntry.ErrorCodeMsg">
+            <summary>
+                Gets or sets the error code MSG.
+            </summary>
+            <value>The error code MSG.</value>
+        </member>
+        <member name="P:MoeLib.Diagnostics.LogEntry.EventId">
+            <summary>
+                Gets or sets the event identifier.
+            </summary>
+            <value>The event identifier.</value>
+        </member>
+        <member name="P:MoeLib.Diagnostics.LogEntry.Function">
+            <summary>
+                Gets or sets the function.
+            </summary>
+            <value>The function.</value>
+        </member>
+        <member name="P:MoeLib.Diagnostics.LogEntry.Level">
+            <summary>
+                Gets or sets the level.
+            </summary>
+            <value>The level.</value>
+        </member>
+        <member name="P:MoeLib.Diagnostics.LogEntry.Message">
+            <summary>
+                Gets or sets the message.
+            </summary>
+            <value>The message.</value>
+        </member>
+        <member name="P:MoeLib.Diagnostics.LogEntry.PreciseTimeStamp">
+            <summary>
+                Gets or sets the precise timestamp.
+            </summary>
+            <value>The precise timestamp.</value>
+        </member>
+        <member name="P:MoeLib.Diagnostics.LogEntry.Role">
+            <summary>
+                Gets or sets the role.
+            </summary>
+            <value>The role.</value>
+        </member>
+        <member name="P:MoeLib.Diagnostics.LogEntry.RoleInstance">
+            <summary>
+                Gets or sets the role instance.
+            </summary>
+            <value>The role instance.</value>
+        </member>
+        <member name="M:MoeLib.Diagnostics.LogEntry.Equals(MoeLib.Diagnostics.LogEntry)">
+            <summary>
+                Indicates whether the current object is equal to another object of the same type.
+            </summary>
+            <returns>
+                true if the current object is equal to the <paramref name="other" /> parameter; otherwise, false.
+            </returns>
+            <param name="other">An object to compare with this object.</param>
+        </member>
+        <member name="M:MoeLib.Diagnostics.LogEntry.op_Inequality(MoeLib.Diagnostics.LogEntry,MoeLib.Diagnostics.LogEntry)">
+            <summary>
+                Implements the !=.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="right">The right.</param>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="M:MoeLib.Diagnostics.LogEntry.op_Equality(MoeLib.Diagnostics.LogEntry,MoeLib.Diagnostics.LogEntry)">
+            <summary>
+                Implements the ==.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="right">The right.</param>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="M:MoeLib.Diagnostics.LogEntry.Equals(System.Object)">
+            <summary>
+                Determines whether the specified object is equal to the current object.
+            </summary>
+            <returns>
+                true if the specified object  is equal to the current object; otherwise, false.
+            </returns>
+            <param name="obj">The object to compare with the current object. </param>
+        </member>
+        <member name="M:MoeLib.Diagnostics.LogEntry.GetHashCode">
+            <summary>
+                Serves as the default hash function.
+            </summary>
+            <returns>
+                A hash code for the current object.
+            </returns>
+        </member>
+        <member name="T:MoeLib.Diagnostics.ILogger">
+            <summary>
+                Interface ILogger
+            </summary>
+        </member>
+        <member name="M:MoeLib.Diagnostics.ILogger.Critical(System.String,System.String,System.UInt64,System.String,MoeLib.Diagnostics.TraceEntry,System.Exception,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+                Criticals the specified message.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="tag">The tag.</param>
+            <param name="errorCode">The error code.</param>
+            <param name="errorCodeMessage">The error code message.</param>
+            <param name="traceEntry">The trace entry.</param>
+            <param name="exception">The exception.</param>
+            <param name="payload">The payload.</param>
+        </member>
+        <member name="M:MoeLib.Diagnostics.ILogger.Error(System.String,System.String,System.UInt64,System.String,MoeLib.Diagnostics.TraceEntry,System.Exception,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+                Errors the specified message.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="tag">The tag.</param>
+            <param name="errorCode">The error code.</param>
+            <param name="errorCodeMessage">The error code message.</param>
+            <param name="traceEntry">The trace entry.</param>
+            <param name="exception">The exception.</param>
+            <param name="payload">The payload.</param>
+        </member>
+        <member name="M:MoeLib.Diagnostics.ILogger.Info(System.String,System.String,System.UInt64,System.String,MoeLib.Diagnostics.TraceEntry,System.Exception,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+                Informations the specified message.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="tag">The tag.</param>
+            <param name="errorCode">The error code.</param>
+            <param name="errorCodeMessage">The error code message.</param>
+            <param name="traceEntry">The trace entry.</param>
+            <param name="exception">The exception.</param>
+            <param name="payload">The payload.</param>
+        </member>
+        <member name="M:MoeLib.Diagnostics.ILogger.Log(System.Int32,System.String,System.String,System.UInt64,System.String,MoeLib.Diagnostics.TraceEntry,System.Exception,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+                Logs the specified level.
+            </summary>
+            <param name="level">The level.</param>
+            <param name="message">The message.</param>
+            <param name="tag">The tag.</param>
+            <param name="errorCode">The error code.</param>
+            <param name="errorCodeMessage">The error code message.</param>
+            <param name="traceEntry">The trace entry.</param>
+            <param name="exception">The exception.</param>
+            <param name="payload">The payload.</param>
+        </member>
+        <member name="M:MoeLib.Diagnostics.ILogger.Verbose(System.String,System.String,System.UInt64,System.String,MoeLib.Diagnostics.TraceEntry,System.Exception,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+                Verboses the specified message.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="tag">The tag.</param>
+            <param name="errorCode">The error code.</param>
+            <param name="errorCodeMessage">The error code message.</param>
+            <param name="traceEntry">The trace entry.</param>
+            <param name="exception">The exception.</param>
+            <param name="payload">The payload.</param>
+        </member>
+        <member name="M:MoeLib.Diagnostics.ILogger.Warning(System.String,System.String,System.UInt64,System.String,MoeLib.Diagnostics.TraceEntry,System.Exception,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+                Warnings the specified message.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="tag">The tag.</param>
+            <param name="errorCode">The error code.</param>
+            <param name="errorCodeMessage">The error code message.</param>
+            <param name="traceEntry">The trace entry.</param>
+            <param name="exception">The exception.</param>
+            <param name="payload">The payload.</param>
+        </member>
+        <member name="T:MoeLib.Diagnostics.MessageContent">
+            <summary>
+                MessageContent.
+            </summary>
+        </member>
+        <member name="M:MoeLib.Diagnostics.MessageContent.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="T:MoeLib.Diagnostics.MessageContent" /> class.
+            </summary>
+        </member>
+        <member name="M:MoeLib.Diagnostics.MessageContent.#ctor(MoeLib.Diagnostics.TraceEntry)">
+            <summary>
+                Initializes a new instance of the <see cref="T:MoeLib.Diagnostics.MessageContent" /> class.
+            </summary>
+            <param name="traceEntry">The trace entry.</param>
+        </member>
+        <member name="P:MoeLib.Diagnostics.MessageContent.ErrorCode">
+            <summary>
+                Gets or sets the error code.
+            </summary>
+            <value>The error code.</value>
+        </member>
+        <member name="P:MoeLib.Diagnostics.MessageContent.ErrorCodeMsg">
+            <summary>
+                Gets or sets the error code MSG.
+            </summary>
+            <value>The error code MSG.</value>
+        </member>
+        <member name="P:MoeLib.Diagnostics.MessageContent.Message">
+            <summary>
+                Gets or sets the message.
+            </summary>
+            <value>The message.</value>
+        </member>
+        <member name="P:MoeLib.Diagnostics.MessageContent.Payload">
+            <summary>
+                Gets or sets the payload.
+            </summary>
+            <value>The payload.</value>
+        </member>
+        <member name="P:MoeLib.Diagnostics.MessageContent.Tag">
+            <summary>
+                Gets or sets the tag.
+            </summary>
+            <value>The tag.</value>
+        </member>
+        <member name="M:MoeLib.Diagnostics.MessageContent.op_Inequality(MoeLib.Diagnostics.MessageContent,MoeLib.Diagnostics.MessageContent)">
+            <summary>
+            Implements the !=.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="right">The right.</param>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="M:MoeLib.Diagnostics.MessageContent.op_Equality(MoeLib.Diagnostics.MessageContent,MoeLib.Diagnostics.MessageContent)">
+            <summary>
+            Implements the ==.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="right">The right.</param>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="M:MoeLib.Diagnostics.MessageContent.Equals(System.Object)">
+            <summary>
+            Determines whether the specified object is equal to the current object.
+            </summary>
+            <returns>
+            true if the specified object  is equal to the current object; otherwise, false.
+            </returns>
+            <param name="obj">The object to compare with the current object. </param>
+        </member>
+        <member name="M:MoeLib.Diagnostics.MessageContent.Equals(MoeLib.Diagnostics.MessageContent)">
+            <summary>
+            Indicates whether the current object is equal to another object of the same type.
+            </summary>
+            <returns>
+            true if the current object is equal to the <paramref name="other"/> parameter; otherwise, false.
+            </returns>
+            <param name="other">An object to compare with this object.</param>
+        </member>
+        <member name="M:MoeLib.Diagnostics.MessageContent.GetHashCode">
+            <summary>
+            Serves as the default hash function.
+            </summary>
+            <returns>
+            A hash code for the current object.
+            </returns>
+        </member>
+        <member name="T:MoeLib.Diagnostics.TraceEntry">
+            <summary>
+                TraceEntry.
+            </summary>
+        </member>
+        <member name="P:MoeLib.Diagnostics.TraceEntry.ClientId">
+            <summary>
+                Gets or sets the client identifier.
+            </summary>
+            <value>The client identifier.</value>
+        </member>
+        <member name="P:MoeLib.Diagnostics.TraceEntry.DeviceId">
+            <summary>
+                Gets or sets the device identifier.
+            </summary>
+            <value>The device identifier.</value>
+        </member>
+        <member name="P:MoeLib.Diagnostics.TraceEntry.RequestId">
+            <summary>
+                Gets or sets the request identifier.
+            </summary>
+            <value>The request identifier.</value>
+        </member>
+        <member name="P:MoeLib.Diagnostics.TraceEntry.SessionId">
+            <summary>
+                Gets or sets the session identifier.
+            </summary>
+            <value>The session identifier.</value>
+        </member>
+        <member name="P:MoeLib.Diagnostics.TraceEntry.SourceIP">
+            <summary>
+                Gets or sets the source ip.
+            </summary>
+            <value>The source ip.</value>
+        </member>
+        <member name="P:MoeLib.Diagnostics.TraceEntry.SourceUserAgent">
+            <summary>
+                Gets or sets the source user agent.
+            </summary>
+            <value>The source user agent.</value>
+        </member>
+        <member name="P:MoeLib.Diagnostics.TraceEntry.UserId">
+            <summary>
+                Gets or sets the user identifier.
+            </summary>
+            <value>The user identifier.</value>
+        </member>
+        <member name="M:MoeLib.Diagnostics.TraceEntry.op_Inequality(MoeLib.Diagnostics.TraceEntry,MoeLib.Diagnostics.TraceEntry)">
+            <summary>
+            Implements the !=.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="right">The right.</param>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="M:MoeLib.Diagnostics.TraceEntry.op_Equality(MoeLib.Diagnostics.TraceEntry,MoeLib.Diagnostics.TraceEntry)">
+            <summary>
+            Implements the ==.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="right">The right.</param>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="M:MoeLib.Diagnostics.TraceEntry.Equals(System.Object)">
+            <summary>
+            Determines whether the specified object is equal to the current object.
+            </summary>
+            <returns>
+            true if the specified object  is equal to the current object; otherwise, false.
+            </returns>
+            <param name="obj">The object to compare with the current object. </param>
+        </member>
+        <member name="M:MoeLib.Diagnostics.TraceEntry.Equals(MoeLib.Diagnostics.TraceEntry)">
+            <summary>
+            Indicates whether the current object is equal to another object of the same type.
+            </summary>
+            <returns>
+            true if the current object is equal to the <paramref name="other"/> parameter; otherwise, false.
+            </returns>
+            <param name="other">An object to compare with this object.</param>
+        </member>
+        <member name="M:MoeLib.Diagnostics.TraceEntry.GetHashCode">
+            <summary>
+            Serves as the default hash function.
+            </summary>
+            <returns>
+            A hash code for the current object.
+            </returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CloudService", "CloudService", "{108C4FD2-354A-4A1A-812C-61781AF6E77D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lab", "Lab", "{C730BEC6-F05B-46AF-B3B6-89A2AC0839F8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5D251756-2EC2-450C-AA65-5D1049C15716}"
+	ProjectSection(SolutionItems) = preProject
+		..\Publish\daemon_user.sql = ..\Publish\daemon_user.sql
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jinyinmao.Daemon", "Jinyinmao.Daemon\Jinyinmao.Daemon.csproj", "{F7A031C2-9777-4558-9EF9-05456E650A93}"
+EndProject
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "Jinyinmao.Daemon.CloudService", "Jinyinmao.Daemon.CloudService\Jinyinmao.Daemon.CloudService.ccproj", "{19370A35-3B36-4282-A27C-F732B71D1AA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsole", "Lab\TestConsole\TestConsole.csproj", "{7F7F98F6-9718-41EE-BE90-FD35B634AAF1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F7A031C2-9777-4558-9EF9-05456E650A93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7A031C2-9777-4558-9EF9-05456E650A93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7A031C2-9777-4558-9EF9-05456E650A93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7A031C2-9777-4558-9EF9-05456E650A93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19370A35-3B36-4282-A27C-F732B71D1AA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19370A35-3B36-4282-A27C-F732B71D1AA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19370A35-3B36-4282-A27C-F732B71D1AA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19370A35-3B36-4282-A27C-F732B71D1AA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F7F98F6-9718-41EE-BE90-FD35B634AAF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F7F98F6-9718-41EE-BE90-FD35B634AAF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F7F98F6-9718-41EE-BE90-FD35B634AAF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F7F98F6-9718-41EE-BE90-FD35B634AAF1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F7A031C2-9777-4558-9EF9-05456E650A93} = {108C4FD2-354A-4A1A-812C-61781AF6E77D}
+		{19370A35-3B36-4282-A27C-F732B71D1AA3} = {108C4FD2-354A-4A1A-812C-61781AF6E77D}
+		{7F7F98F6-9718-41EE-BE90-FD35B634AAF1} = {C730BEC6-F05B-46AF-B3B6-89A2AC0839F8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8;packages\EnterpriseLibrary.TransientFaultHandling.Data.6.0.1304.1\lib\NET45
+	EndGlobalSection
+EndGlobal

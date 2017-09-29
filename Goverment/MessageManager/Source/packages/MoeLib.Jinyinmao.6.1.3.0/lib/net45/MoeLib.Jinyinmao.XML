@@ -1,0 +1,925 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MoeLib.Jinyinmao</name>
+    </assembly>
+    <members>
+        <member name="T:Moe.Lib.Jinyinmao.App">
+            <summary>
+                App.
+            </summary>
+        </member>
+        <member name="F:Moe.Lib.Jinyinmao.App.app">
+            <summary>
+                The application
+            </summary>
+        </member>
+        <member name="F:Moe.Lib.Jinyinmao.App.configurations">
+            <summary>
+                The configurations
+            </summary>
+        </member>
+        <member name="F:Moe.Lib.Jinyinmao.App.host">
+            <summary>
+                The host
+            </summary>
+        </member>
+        <member name="F:Moe.Lib.Jinyinmao.App.logManager">
+            <summary>
+                The log manager
+            </summary>
+        </member>
+        <member name="M:Moe.Lib.Jinyinmao.App.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="T:Moe.Lib.Jinyinmao.App" /> class.
+            </summary>
+        </member>
+        <member name="P:Moe.Lib.Jinyinmao.App.Condigurations">
+            <summary>
+                Gets the condigurations.
+            </summary>
+            <value>The condigurations.</value>
+            <exception cref="T:System.InvalidOperationException">The app has not configurated the ConfigManager.</exception>
+        </member>
+        <member name="P:Moe.Lib.Jinyinmao.App.Host">
+            <summary>
+                Gets the host.
+            </summary>
+            <value>The host.</value>
+        </member>
+        <member name="P:Moe.Lib.Jinyinmao.App.IsInAzureCloud">
+            <summary>
+                Gets a value indicating whether this instance is in azure cloud.
+            </summary>
+            <value><c>true</c> if this instance is in azure cloud; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Moe.Lib.Jinyinmao.App.LogManager">
+            <summary>
+                Gets the log manager.
+            </summary>
+            <value>The log manager.</value>
+        </member>
+        <member name="P:Moe.Lib.Jinyinmao.App.Configurated">
+            <summary>
+                Gets a value indicating whether this <see cref="T:Moe.Lib.Jinyinmao.App" /> is configurated.
+            </summary>
+            <value><c>true</c> if configurated; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Moe.Lib.Jinyinmao.App.Initialized">
+            <summary>
+                Gets a value indicating whether this <see cref="T:Moe.Lib.Jinyinmao.App" /> is initialized.
+            </summary>
+            <value><c>true</c> if initialized; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:Moe.Lib.Jinyinmao.App.Initialize">
+            <summary>
+                Initializes this instance.
+            </summary>
+            <returns>App.</returns>
+        </member>
+        <member name="M:Moe.Lib.Jinyinmao.App.Config(MoeLib.Jinyinmao.IAppConfigProvider)">
+            <summary>
+                Configurations the specified application configuration provider.
+            </summary>
+            <param name="appConfigProvider">The application configuration provider.</param>
+            <returns>App.</returns>
+        </member>
+        <member name="M:Moe.Lib.Jinyinmao.App.Config">
+            <summary>
+                Configurations this instance.
+            </summary>
+            <returns>App.</returns>
+        </member>
+        <member name="M:Moe.Lib.Jinyinmao.App.UseConfigManager(MoeLib.Jinyinmao.Configs.IConfigProvider,MoeLib.Jinyinmao.Configs.IConfigProvider)">
+            <summary>
+                Uses the configuration manager.
+            </summary>
+            <param name="configProvider">The configuration provider.</param>
+            <param name="configProviderForDev">The configuration provider for dev.</param>
+            <returns>App.</returns>
+        </member>
+        <member name="M:Moe.Lib.Jinyinmao.App.UseFileConfigManager``1(MoeLib.Jinyinmao.Configs.IConfigProvider)">
+            <summary>
+                Uses the file configuration manager.
+            </summary>
+            <typeparam name="TConfig">The type of the configuration.</typeparam>
+            <param name="configProviderForDev">The configuration provider for dev.</param>
+            <returns>App.</returns>
+        </member>
+        <member name="M:Moe.Lib.Jinyinmao.App.UseGovernmentServerConfigManager``1(MoeLib.Jinyinmao.Configs.IConfigProvider)">
+            <summary>
+                Uses the government server configuration manager.
+            </summary>
+            <typeparam name="TConfig">The type of the configuration.</typeparam>
+            <param name="configProviderForDev">The configuration provider for dev.</param>
+            <returns>App.</returns>
+        </member>
+        <member name="M:Moe.Lib.Jinyinmao.App.ThrowInvalidOperationException">
+            <summary>
+                Throws the invalid operation exception.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">
+                The App instance has not been initialized.
+                or
+                The App instance has not been configurated.
+            </exception>
+        </member>
+        <member name="T:MoeLib.Jinyinmao.AppConfigProvider">
+            <summary>
+                AppConfigProvider.
+            </summary>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.AppConfigProvider.GetAppKeysConfig">
+            <summary>
+                Gets the application keys configuration.
+            </summary>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.AppConfigProvider.GetDeploymentIdConfig">
+            <summary>
+                Gets the deployment identifier configuration.
+            </summary>
+            <returns>Guid.</returns>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.AppConfigProvider.GetEnvironmentConfig">
+            <summary>
+                Gets the environment.
+            </summary>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.AppConfigProvider.GetRoleConfig">
+            <summary>
+                Gets the role configuration.
+            </summary>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.AppConfigProvider.GetRoleInstanceConfig">
+            <summary>
+                Gets the role instance configuration.
+            </summary>
+            <returns>System.String.</returns>
+        </member>
+        <member name="T:MoeLib.Jinyinmao.Configs.ConfigManager">
+            <summary>
+                ConfigManager.
+            </summary>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Configs.ConfigManager.#ctor(MoeLib.Jinyinmao.Configs.IConfigProvider)">
+            <summary>
+                Initializes a new instance of the <see cref="T:MoeLib.Jinyinmao.Configs.ConfigManager" /> class.
+            </summary>
+            <param name="configProvider">The configuration provider.</param>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Configs.ConfigManager.#ctor(MoeLib.Jinyinmao.Configs.IConfigProvider,System.TimeSpan)">
+            <summary>
+                Initializes a new instance of the <see cref="T:MoeLib.Jinyinmao.Configs.ConfigManager" /> class.
+            </summary>
+            <param name="configProvider">The configuration provider.</param>
+            <param name="refreshInterval">The refresh interval.</param>
+        </member>
+        <member name="P:MoeLib.Jinyinmao.Configs.ConfigManager.ConfigRefreshTime">
+            <summary>
+                Gets or sets the configuration refresh time.
+            </summary>
+            <value>The configuration refresh time.</value>
+        </member>
+        <member name="P:MoeLib.Jinyinmao.Configs.ConfigManager.Permissions">
+            <summary>
+                Gets the permissions.
+            </summary>
+            <value>The permissions.</value>
+        </member>
+        <member name="P:MoeLib.Jinyinmao.Configs.ConfigManager.RefreshInterval">
+            <summary>
+                Gets or sets the refresh interval.
+            </summary>
+            <value>The refresh interval.</value>
+        </member>
+        <member name="P:MoeLib.Jinyinmao.Configs.ConfigManager.Resources">
+            <summary>
+                Gets the resources.
+            </summary>
+            <value>The resources.</value>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Configs.ConfigManager.GetConfig``1">
+            <summary>
+                Gets the configuration.
+            </summary>
+            <returns>TConfig.</returns>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Configs.ConfigManager.GetConfigType">
+            <summary>
+                Gets the type of the configuration.
+            </summary>
+            <returns>Type.</returns>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Configs.ConfigManager.GetConfigurationsString">
+            <summary>
+                Gets the configurations string.
+            </summary>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Configs.ConfigManager.GetConfigurationVersion">
+            <summary>
+                Gets the get configuration version.
+            </summary>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Configs.ConfigManager.GetPermission(System.String)">
+            <summary>
+                Gets the permission.
+            </summary>
+            <param name="serviceName">Name of the service.</param>
+            <returns>System.Nullable&lt;KeyValuePair&lt;System.String, System.String&gt;&gt;.</returns>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Configs.ConfigManager.GetPermissions">
+            <summary>
+                Gets the permissions.
+            </summary>
+            <returns>Dictionary&lt;System.String, KeyValuePair&lt;System.String, System.String&gt;&gt;.</returns>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Configs.ConfigManager.GetResources">
+            <summary>
+                Gets the resources.
+            </summary>
+            <returns>Dictionary&lt;System.String, System.String&gt;.</returns>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Configs.ConfigManager.GetResourceString(System.String)">
+            <summary>
+                Gets the resource string.
+            </summary>
+            <param name="resourceName">Name of the resource.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Configs.ConfigManager.IsConfigNeedRefresh">
+            <summary>
+                Determines whether [is configuration need refresh].
+            </summary>
+            <returns><c>true</c> if [is configuration need refresh]; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="T:MoeLib.Jinyinmao.Configs.FileConfigProvider`1">
+            <summary>
+                FileConfigProvider.
+            </summary>
+            <typeparam name="TConfig">The type of the configuration.</typeparam>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Configs.FileConfigProvider`1.GetConfigType">
+            <summary>
+                Gets the type of the configuration.
+            </summary>
+            <returns>Type.</returns>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Configs.FileConfigProvider`1.GetConfigurationsString">
+            <summary>
+                Gets the configurations string.
+            </summary>
+            <returns>System.String.</returns>
+        </member>
+        <member name="T:MoeLib.Jinyinmao.Configs.GovernmentHttpClient.ApplicationConfigurationsFetchResponse">
+            <summary>
+                ApplicationConfigurationsFetchResponse.
+            </summary>
+        </member>
+        <member name="P:MoeLib.Jinyinmao.Configs.GovernmentHttpClient.ApplicationConfigurationsFetchResponse.Configurations">
+            <summary>
+                Gets or sets the configurations.
+            </summary>
+            <value>The configurations.</value>
+        </member>
+        <member name="P:MoeLib.Jinyinmao.Configs.GovernmentHttpClient.ApplicationConfigurationsFetchResponse.ConfigurationVersion">
+            <summary>
+                Gets or sets the configuration version.
+            </summary>
+            <value>The configuration version.</value>
+        </member>
+        <member name="P:MoeLib.Jinyinmao.Configs.GovernmentHttpClient.ApplicationConfigurationsFetchResponse.Permissions">
+            <summary>
+                Gets or sets the permissions.
+            </summary>
+            <value>The permissions.</value>
+        </member>
+        <member name="T:MoeLib.Jinyinmao.Configs.GovernmentHttpClient.GovernmentHttpClientMessageHandler">
+            <summary>
+                GovernmentHttpClientMessageHandler.
+            </summary>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Configs.GovernmentHttpClient.GovernmentHttpClientMessageHandler.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="T:MoeLib.Jinyinmao.Configs.GovernmentHttpClient.GovernmentHttpClientMessageHandler" /> class.
+            </summary>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Configs.GovernmentHttpClient.GovernmentHttpClientMessageHandler.SendAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)">
+            <summary>
+                Sends an HTTP request to the inner handler to send to the server as an asynchronous operation.
+            </summary>
+            <returns>
+                Returns <see cref="T:System.Threading.Tasks.Task`1" />. The task object representing the asynchronous operation.
+            </returns>
+            <param name="request">The HTTP request message to send to the server.</param>
+            <param name="cancellationToken">A cancellation token to cancel operation.</param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="request" /> was null.</exception>
+        </member>
+        <member name="T:MoeLib.Jinyinmao.Configs.GovernmentHttpClient.ApplicationConfigurationsFetchRequest">
+            <summary>
+                ApplicationConfigurationsFetchRequest.
+            </summary>
+        </member>
+        <member name="P:MoeLib.Jinyinmao.Configs.GovernmentHttpClient.ApplicationConfigurationsFetchRequest.Role">
+            <summary>
+                Gets or sets the role.
+            </summary>
+            <value>The role.</value>
+        </member>
+        <member name="P:MoeLib.Jinyinmao.Configs.GovernmentHttpClient.ApplicationConfigurationsFetchRequest.RoleInstance">
+            <summary>
+                Gets or sets the role instance.
+            </summary>
+            <value>The role instance.</value>
+        </member>
+        <member name="P:MoeLib.Jinyinmao.Configs.GovernmentHttpClient.ApplicationConfigurationsFetchRequest.SourceVersion">
+            <summary>
+                Gets or sets the source version.
+            </summary>
+            <value>The source version.</value>
+        </member>
+        <member name="T:MoeLib.Jinyinmao.Configs.GovernmentServerConfigProvider`1">
+            <summary>
+                GovernmentServerConfigProvider.
+            </summary>
+            <typeparam name="TConfig">The type of the t configuration.</typeparam>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Configs.GovernmentServerConfigProvider`1.GetConfigType">
+            <summary>
+                Gets the type of the configuration.
+            </summary>
+            <returns>Type.</returns>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Configs.GovernmentServerConfigProvider`1.GetConfigurationsString">
+            <summary>
+                Gets the configurations string.
+            </summary>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Configs.GovernmentServerConfigProvider`1.GetConfig">
+            <summary>
+                Gets the configuration.
+            </summary>
+            <returns>TConfig.</returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:MoeLib.Jinyinmao.Configs.IConfig">
+            <summary>
+                Interface IConfig
+            </summary>
+        </member>
+        <member name="P:MoeLib.Jinyinmao.Configs.IConfig.Configurations">
+            <summary>
+                Gets the configurations.
+            </summary>
+            <value>The configurations.</value>
+        </member>
+        <member name="P:MoeLib.Jinyinmao.Configs.IConfig.ConfigurationVersion">
+            <summary>
+                Gets the configuration version.
+            </summary>
+            <value>The configuration version.</value>
+        </member>
+        <member name="P:MoeLib.Jinyinmao.Configs.IConfig.Permissions">
+            <summary>
+                Gets the permissions.
+            </summary>
+            <value>The permissions.</value>
+        </member>
+        <member name="P:MoeLib.Jinyinmao.Configs.IConfig.Resources">
+            <summary>
+                Gets the resources.
+            </summary>
+            <value>The resources.</value>
+        </member>
+        <member name="T:MoeLib.Jinyinmao.Configs.IConfig`1">
+            <summary>
+                Interface IConfig
+            </summary>
+            <typeparam name="TConfig"></typeparam>
+        </member>
+        <member name="P:MoeLib.Jinyinmao.Configs.IConfig`1.Config">
+            <summary>
+                Gets the configuration.
+            </summary>
+            <value>The configuration.</value>
+        </member>
+        <member name="T:MoeLib.Jinyinmao.Configs.IConfigProvider">
+            <summary>
+                Interface IConfigProvider
+            </summary>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Configs.IConfigProvider.GetConfigType">
+            <summary>
+                Gets the type of the configuration.
+            </summary>
+            <returns>Type.</returns>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Configs.IConfigProvider.GetConfigurationsString">
+            <summary>
+                Gets the configurations string.
+            </summary>
+            <returns>System.String.</returns>
+        </member>
+        <member name="T:MoeLib.Jinyinmao.Host">
+            <summary>
+                Host.
+            </summary>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Host.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="T:MoeLib.Jinyinmao.Host" /> class.
+            </summary>
+        </member>
+        <member name="P:MoeLib.Jinyinmao.Host.AppKeys">
+            <summary>
+                Gets or sets the application keys.
+            </summary>
+            <value>The application keys.</value>
+        </member>
+        <member name="P:MoeLib.Jinyinmao.Host.DeploymentId">
+            <summary>
+                Gets or sets the deployment identifier.
+            </summary>
+            <value>The deployment identifier.</value>
+        </member>
+        <member name="P:MoeLib.Jinyinmao.Host.Environment">
+            <summary>
+                Gets or sets the environment.
+            </summary>
+            <value>The environment.</value>
+        </member>
+        <member name="P:MoeLib.Jinyinmao.Host.Role">
+            <summary>
+                Gets or sets the role.
+            </summary>
+            <value>The role.</value>
+        </member>
+        <member name="P:MoeLib.Jinyinmao.Host.RoleInstance">
+            <summary>
+                Gets or sets the role instance.
+            </summary>
+            <value>The role instance.</value>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Host.IsInAzureCloud">
+            <summary>
+                Determines whether [is in azure cloud].
+            </summary>
+            <returns><c>true</c> if [is in azure cloud]; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="T:MoeLib.Jinyinmao.IAppConfigProvider">
+            <summary>
+                Interface IAppConfigProvider
+            </summary>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.IAppConfigProvider.GetAppKeysConfig">
+            <summary>
+                Gets the application keys configuration.
+            </summary>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.IAppConfigProvider.GetDeploymentIdConfig">
+            <summary>
+                Gets the deployment identifier configuration.
+            </summary>
+            <returns>Guid.</returns>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.IAppConfigProvider.GetEnvironmentConfig">
+            <summary>
+                Gets the environment configuration.
+            </summary>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.IAppConfigProvider.GetRoleConfig">
+            <summary>
+                Gets the role configuration.
+            </summary>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.IAppConfigProvider.GetRoleInstanceConfig">
+            <summary>
+                Gets the role instance configuration.
+            </summary>
+            <returns>System.String.</returns>
+        </member>
+        <member name="T:MoeLib.Jinyinmao.Diagnostics.NLogger">
+            <summary>
+                NLogger.
+            </summary>
+        </member>
+        <member name="F:MoeLib.Jinyinmao.Diagnostics.NLogger.ApplicationLogger">
+            <summary>
+                The application logger
+            </summary>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Diagnostics.NLogger.#cctor">
+            <summary>
+                Initializes static members of the <see cref="T:MoeLib.Jinyinmao.Diagnostics.NLogger" /> class.
+            </summary>
+        </member>
+        <member name="P:MoeLib.Jinyinmao.Diagnostics.NLogger.Logger">
+            <summary>
+                Gets the logger.
+            </summary>
+            <value>The logger.</value>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Diagnostics.NLogger.Critical(System.String,System.String,System.UInt64,System.String,MoeLib.Diagnostics.TraceEntry,System.Exception,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+                Criticals the specified message.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="tag">The tag.</param>
+            <param name="errorCode">The error code.</param>
+            <param name="errorCodeMessage">The error code message.</param>
+            <param name="traceEntry">The trace entry.</param>
+            <param name="exception">The exception.</param>
+            <param name="payload">The payload.</param>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Diagnostics.NLogger.Error(System.String,System.String,System.UInt64,System.String,MoeLib.Diagnostics.TraceEntry,System.Exception,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+                Errors the specified message.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="tag">The tag.</param>
+            <param name="errorCode">The error code.</param>
+            <param name="errorCodeMessage">The error code message.</param>
+            <param name="traceEntry">The trace entry.</param>
+            <param name="exception">The exception.</param>
+            <param name="payload">The payload.</param>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Diagnostics.NLogger.Info(System.String,System.String,System.UInt64,System.String,MoeLib.Diagnostics.TraceEntry,System.Exception,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+                Informations the specified message.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="tag">The tag.</param>
+            <param name="errorCode">The error code.</param>
+            <param name="errorCodeMessage">The error code message.</param>
+            <param name="traceEntry">The trace entry.</param>
+            <param name="exception">The exception.</param>
+            <param name="payload">The payload.</param>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Diagnostics.NLogger.Log(System.Int32,System.String,System.String,System.UInt64,System.String,MoeLib.Diagnostics.TraceEntry,System.Exception,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+                Logs the specified level.
+            </summary>
+            <param name="level">The level.</param>
+            <param name="message">The message.</param>
+            <param name="tag">The tag.</param>
+            <param name="errorCode">The error code.</param>
+            <param name="errorCodeMessage">The error code message.</param>
+            <param name="traceEntry">The trace entry.</param>
+            <param name="exception">The exception.</param>
+            <param name="payload">The payload.</param>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Diagnostics.NLogger.Verbose(System.String,System.String,System.UInt64,System.String,MoeLib.Diagnostics.TraceEntry,System.Exception,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+                Verboses the specified message.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="tag">The tag.</param>
+            <param name="errorCode">The error code.</param>
+            <param name="errorCodeMessage">The error code message.</param>
+            <param name="traceEntry">The trace entry.</param>
+            <param name="exception">The exception.</param>
+            <param name="payload">The payload.</param>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Diagnostics.NLogger.Warning(System.String,System.String,System.UInt64,System.String,MoeLib.Diagnostics.TraceEntry,System.Exception,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+                Warnings the specified message.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="tag">The tag.</param>
+            <param name="errorCode">The error code.</param>
+            <param name="errorCodeMessage">The error code message.</param>
+            <param name="traceEntry">The trace entry.</param>
+            <param name="exception">The exception.</param>
+            <param name="payload">The payload.</param>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Diagnostics.NLogger.Critical(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.UInt64,System.String,System.Exception,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+                Criticals the specified message.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="clientId">The client identifier.</param>
+            <param name="deviceId">The device identifier.</param>
+            <param name="requestId">The request identifier.</param>
+            <param name="sessionId">The session identifier.</param>
+            <param name="userId">The user identifier.</param>
+            <param name="tag">The tag.</param>
+            <param name="errorCode">The error code.</param>
+            <param name="errorCodeMessage">The error code message.</param>
+            <param name="exception">The exception.</param>
+            <param name="payload">The payload.</param>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Diagnostics.NLogger.Error(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.UInt64,System.String,System.Exception,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+                Errors the specified message.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="clientId">The client identifier.</param>
+            <param name="deviceId">The device identifier.</param>
+            <param name="requestId">The request identifier.</param>
+            <param name="sessionId">The session identifier.</param>
+            <param name="userId">The user identifier.</param>
+            <param name="tag">The tag.</param>
+            <param name="errorCode">The error code.</param>
+            <param name="errorCodeMessage">The error code message.</param>
+            <param name="exception">The exception.</param>
+            <param name="payload">The payload.</param>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Diagnostics.NLogger.Info(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.UInt64,System.String,System.Exception,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+                Informations the specified message.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="clientId">The client identifier.</param>
+            <param name="deviceId">The device identifier.</param>
+            <param name="requestId">The request identifier.</param>
+            <param name="sessionId">The session identifier.</param>
+            <param name="userId">The user identifier.</param>
+            <param name="tag">The tag.</param>
+            <param name="errorCode">The error code.</param>
+            <param name="errorCodeMessage">The error code message.</param>
+            <param name="exception">The exception.</param>
+            <param name="payload">The payload.</param>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Diagnostics.NLogger.Log(System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.UInt64,System.String,System.Exception,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+                Logs the specified level.
+            </summary>
+            <param name="level">The level.</param>
+            <param name="message">The message.</param>
+            <param name="clientId">The client identifier.</param>
+            <param name="deviceId">The device identifier.</param>
+            <param name="requestId">The request identifier.</param>
+            <param name="sessionId">The session identifier.</param>
+            <param name="userId">The user identifier.</param>
+            <param name="tag">The tag.</param>
+            <param name="errorCode">The error code.</param>
+            <param name="errorCodeMessage">The error code message.</param>
+            <param name="exception">The exception.</param>
+            <param name="payload">The payload.</param>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Diagnostics.NLogger.Verbose(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.UInt64,System.String,System.Exception,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+                Verboses the specified message.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="clientId">The client identifier.</param>
+            <param name="deviceId">The device identifier.</param>
+            <param name="requestId">The request identifier.</param>
+            <param name="sessionId">The session identifier.</param>
+            <param name="userId">The user identifier.</param>
+            <param name="tag">The tag.</param>
+            <param name="errorCode">The error code.</param>
+            <param name="errorCodeMessage">The error code message.</param>
+            <param name="exception">The exception.</param>
+            <param name="payload">The payload.</param>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Diagnostics.NLogger.Warning(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.UInt64,System.String,System.Exception,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+                Warnings the specified message.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="clientId">The client identifier.</param>
+            <param name="deviceId">The device identifier.</param>
+            <param name="requestId">The request identifier.</param>
+            <param name="sessionId">The session identifier.</param>
+            <param name="userId">The user identifier.</param>
+            <param name="tag">The tag.</param>
+            <param name="errorCode">The error code.</param>
+            <param name="errorCodeMessage">The error code message.</param>
+            <param name="exception">The exception.</param>
+            <param name="payload">The payload.</param>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Diagnostics.NLogger.BuildLogEntry(System.Int32,System.String,System.String,System.UInt64,System.String,MoeLib.Diagnostics.TraceEntry,System.Exception,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+                Builds the log entry.
+            </summary>
+            <param name="level">The level.</param>
+            <param name="message">The message.</param>
+            <param name="tag">The tag.</param>
+            <param name="errorCode">The error code.</param>
+            <param name="errorCodeMessage">The error code message.</param>
+            <param name="traceEntry">The trace entry.</param>
+            <param name="exception">The exception.</param>
+            <param name="payload">The payload.</param>
+            <returns>LogEntry.</returns>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Diagnostics.NLogger.InitApplicationLogger">
+            <summary>
+                Initializes the application logger.
+            </summary>
+            <returns>NLog.ILogger.</returns>
+        </member>
+        <member name="T:MoeLib.Jinyinmao.Diagnostics.LogManager">
+            <summary>
+                LogManager.
+            </summary>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Diagnostics.LogManager.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="T:MoeLib.Jinyinmao.Diagnostics.LogManager" /> class.
+            </summary>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Diagnostics.LogManager.CreateLogger">
+            <summary>
+                Creates the logger.
+            </summary>
+            <returns>ILogger.</returns>
+        </member>
+        <member name="T:MoeLib.Jinyinmao.Diagnostics.WADLogger">
+            <summary>
+                WADLogger.
+            </summary>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Diagnostics.WADLogger.Critical(System.String,System.String,System.UInt64,System.String,MoeLib.Diagnostics.TraceEntry,System.Exception,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+                Criticals the specified message.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="tag">The tag.</param>
+            <param name="errorCode">The error code.</param>
+            <param name="errorCodeMessage">The error code message.</param>
+            <param name="traceEntry">The trace entry.</param>
+            <param name="exception">The exception.</param>
+            <param name="payload">The payload.</param>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Diagnostics.WADLogger.Error(System.String,System.String,System.UInt64,System.String,MoeLib.Diagnostics.TraceEntry,System.Exception,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+                Errors the specified message.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="tag">The tag.</param>
+            <param name="errorCode">The error code.</param>
+            <param name="errorCodeMessage">The error code message.</param>
+            <param name="traceEntry">The trace entry.</param>
+            <param name="exception">The exception.</param>
+            <param name="payload">The payload.</param>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Diagnostics.WADLogger.Info(System.String,System.String,System.UInt64,System.String,MoeLib.Diagnostics.TraceEntry,System.Exception,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+                Informations the specified message.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="tag">The tag.</param>
+            <param name="errorCode">The error code.</param>
+            <param name="errorCodeMessage">The error code message.</param>
+            <param name="traceEntry">The trace entry.</param>
+            <param name="exception">The exception.</param>
+            <param name="payload">The payload.</param>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Diagnostics.WADLogger.Log(System.Int32,System.String,System.String,System.UInt64,System.String,MoeLib.Diagnostics.TraceEntry,System.Exception,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+                Logs the specified level.
+            </summary>
+            <param name="level">The level.</param>
+            <param name="message">The message.</param>
+            <param name="tag">The tag.</param>
+            <param name="errorCode">The error code.</param>
+            <param name="errorCodeMessage">The error code message.</param>
+            <param name="traceEntry">The trace entry.</param>
+            <param name="exception">The exception.</param>
+            <param name="payload">The payload.</param>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Diagnostics.WADLogger.Verbose(System.String,System.String,System.UInt64,System.String,MoeLib.Diagnostics.TraceEntry,System.Exception,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+                Verboses the specified message.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="tag">The tag.</param>
+            <param name="errorCode">The error code.</param>
+            <param name="errorCodeMessage">The error code message.</param>
+            <param name="traceEntry">The trace entry.</param>
+            <param name="exception">The exception.</param>
+            <param name="payload">The payload.</param>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Diagnostics.WADLogger.Warning(System.String,System.String,System.UInt64,System.String,MoeLib.Diagnostics.TraceEntry,System.Exception,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+                Warnings the specified message.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="tag">The tag.</param>
+            <param name="errorCode">The error code.</param>
+            <param name="errorCodeMessage">The error code message.</param>
+            <param name="traceEntry">The trace entry.</param>
+            <param name="exception">The exception.</param>
+            <param name="payload">The payload.</param>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Diagnostics.WADLogger.Critical(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.UInt64,System.String,System.Exception,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+                Criticals the specified message.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="clientId">The client identifier.</param>
+            <param name="deviceId">The device identifier.</param>
+            <param name="requestId">The request identifier.</param>
+            <param name="sessionId">The session identifier.</param>
+            <param name="userId">The user identifier.</param>
+            <param name="tag">The tag.</param>
+            <param name="errorCode">The error code.</param>
+            <param name="errorCodeMessage">The error code message.</param>
+            <param name="exception">The exception.</param>
+            <param name="payload">The payload.</param>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Diagnostics.WADLogger.Error(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.UInt64,System.String,System.Exception,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+                Errors the specified message.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="clientId">The client identifier.</param>
+            <param name="deviceId">The device identifier.</param>
+            <param name="requestId">The request identifier.</param>
+            <param name="sessionId">The session identifier.</param>
+            <param name="userId">The user identifier.</param>
+            <param name="tag">The tag.</param>
+            <param name="errorCode">The error code.</param>
+            <param name="errorCodeMessage">The error code message.</param>
+            <param name="exception">The exception.</param>
+            <param name="payload">The payload.</param>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Diagnostics.WADLogger.Info(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.UInt64,System.String,System.Exception,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+                Informations the specified message.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="clientId">The client identifier.</param>
+            <param name="deviceId">The device identifier.</param>
+            <param name="requestId">The request identifier.</param>
+            <param name="sessionId">The session identifier.</param>
+            <param name="userId">The user identifier.</param>
+            <param name="tag">The tag.</param>
+            <param name="errorCode">The error code.</param>
+            <param name="errorCodeMessage">The error code message.</param>
+            <param name="exception">The exception.</param>
+            <param name="payload">The payload.</param>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Diagnostics.WADLogger.Log(System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.UInt64,System.String,System.Exception,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+                Logs the specified level.
+            </summary>
+            <param name="level">The level.</param>
+            <param name="message">The message.</param>
+            <param name="clientId">The client identifier.</param>
+            <param name="deviceId">The device identifier.</param>
+            <param name="requestId">The request identifier.</param>
+            <param name="sessionId">The session identifier.</param>
+            <param name="userId">The user identifier.</param>
+            <param name="tag">The tag.</param>
+            <param name="errorCode">The error code.</param>
+            <param name="errorCodeMessage">The error code message.</param>
+            <param name="exception">The exception.</param>
+            <param name="payload">The payload.</param>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Diagnostics.WADLogger.Verbose(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.UInt64,System.String,System.Exception,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+                Verboses the specified message.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="clientId">The client identifier.</param>
+            <param name="deviceId">The device identifier.</param>
+            <param name="requestId">The request identifier.</param>
+            <param name="sessionId">The session identifier.</param>
+            <param name="userId">The user identifier.</param>
+            <param name="tag">The tag.</param>
+            <param name="errorCode">The error code.</param>
+            <param name="errorCodeMessage">The error code message.</param>
+            <param name="exception">The exception.</param>
+            <param name="payload">The payload.</param>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Diagnostics.WADLogger.Warning(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.UInt64,System.String,System.Exception,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+                Warnings the specified message.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="clientId">The client identifier.</param>
+            <param name="deviceId">The device identifier.</param>
+            <param name="requestId">The request identifier.</param>
+            <param name="sessionId">The session identifier.</param>
+            <param name="userId">The user identifier.</param>
+            <param name="tag">The tag.</param>
+            <param name="errorCode">The error code.</param>
+            <param name="errorCodeMessage">The error code message.</param>
+            <param name="exception">The exception.</param>
+            <param name="payload">The payload.</param>
+        </member>
+        <member name="M:MoeLib.Jinyinmao.Diagnostics.WADLogger.BuildLogMessageContent(System.String,System.String,System.UInt64,System.String,MoeLib.Diagnostics.TraceEntry,System.Exception,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+                Builds the content of the log message.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="tag">The tag.</param>
+            <param name="errorCode">The error code.</param>
+            <param name="errorCodeMessage">The error code message.</param>
+            <param name="traceEntry">The trace entry.</param>
+            <param name="exception">The exception.</param>
+            <param name="payload">The payload.</param>
+            <returns>MessageContent.</returns>
+        </member>
+    </members>
+</doc>
