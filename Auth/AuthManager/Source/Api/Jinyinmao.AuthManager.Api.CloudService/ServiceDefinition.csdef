@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceDefinition name="Jinyinmao.AuthManager.Api.CloudService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2015-04.2.6">
+  <WebRole name="Jinyinmao.AuthManager.Api" vmsize="ExtraSmall">
+    <Sites>
+      <Site name="Web">
+        <Bindings>
+          <Binding name="Endpoint1" endpointName="HTTP" />
+          <Binding name="Endpoint1" endpointName="HTTPS" />
+        </Bindings>
+      </Site>
+    </Sites>
+    <ConfigurationSettings>
+      <Setting name="AppKeys" />
+      <Setting name="Env" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
+    </ConfigurationSettings>
+    <Endpoints>
+      <InputEndpoint name="HTTP" protocol="http" port="80" />
+      <InputEndpoint name="HTTPS" protocol="https" port="443" certificate="SSLCertificate" />
+      <InternalEndpoint name="ZabbixAgent" protocol="tcp" port="10050" />
+      <InternalEndpoint name="ZabbixTrapper" protocol="tcp" port="10051" />
+    </Endpoints>
+    <Imports>
+      <Import moduleName="RemoteAccess" />
+      <Import moduleName="RemoteForwarder" />
+    </Imports>
+    <Startup>
+      <Task commandLine="EnableCompression.cmd" executionContext="elevated" taskType="simple">
+      </Task>
+    </Startup>
+    <Certificates>
+      <Certificate name="SSLCertificate" storeLocation="CurrentUser" storeName="My" />
+    </Certificates>
+  </WebRole>
+</ServiceDefinition>

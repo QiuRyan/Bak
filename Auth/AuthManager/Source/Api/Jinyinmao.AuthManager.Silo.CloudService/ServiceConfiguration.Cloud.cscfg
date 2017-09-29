@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ServiceConfiguration serviceName="Jinyinmao.AuthManager.Silo.CloudService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2015-04.2.6">
+  <Role name="Jinyinmao.AuthManager.Silo">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="AppKeys" value="&amp;lt;RSAKeyValue&amp;gt;&amp;lt;Modulus&amp;gt;m8cuFS77E7MyspqAYqPwUQSTHaCeB3ckMEkJidvRrBoTy99LbPhd8dEXjAVezpjtbCE8og3+1h+Cxg6iksiURVLVD7F2VlE+EybZfaryUS9OMPIguQMX5E+C4u3Ayv08qTm+5WUB+tfVsqYmBjO/GNIpCoKaRif/PrMNgm8sk4qrsjnNrxN2xnc7Tn80hy6ypJ1bIszQpEUInv37uW3JvhLrFTrq2HrXdtujc1oOgHgnMS+TRAQiE/BtgqFa82W1yrQVp3XCg5IEQWzaRBwzf1AK/3xj6RjAZkA1+0vwyYGrEsMuVKJJ6A6CMspE6H5NJS3HUeGH5vqE9gzcY1/3kQ==&amp;lt;/Modulus&amp;gt;&amp;lt;Exponent&amp;gt;AQAB&amp;lt;/Exponent&amp;gt;&amp;lt;P&amp;gt;yUP9ESI2lDHyR7CpLdAq6wcNjwyQ/6LxZvr9gk6CtWQvPC3NhFHXOq76rIGH7pvP69vdm2+KK/SJNsOLPkRU5l+UPcrbAIIjLCmVqRGNlqMx8hvOR7WVOZnflAyKkRLsj7qezXShmcXmh+Tpw86Ev2A158i6X7MwcfzPui72HDc=&amp;lt;/P&amp;gt;&amp;lt;Q&amp;gt;xiRfITc+6uJXBWpmC28OfjMB0WWrmaB1HptdSXcw2TZkFqFSLEpE1c3vuzgx8ebMTXw4ecF9QYnId7npXLqzTHw++1z+jM/QdcqIS7Bvqk6h2m8ASDT3Xq2TguVfcahMRb0eAmxD4cTAOJGesnMDrqa1oIRb6NZY5rG0e9kE9nc=&amp;lt;/Q&amp;gt;&amp;lt;DP&amp;gt;YMoWgM/gSYJ/jmRx57tNeHuK1LlpXdbhmvGnSqwxBcSpRpqMVE77X5hYqu8cDO7Xngi9WQvZ+et+tVxysT4xShy68MCGc4ciHRHejFEJs2DGGzWuDSRRIENUlyE03jGonDJWPl4RfR8ED2RR2z2M72/4XIBWyMEm0hqPV21QJB8=&amp;lt;/DP&amp;gt;&amp;lt;DQ&amp;gt;AjXHpdwy5HXP2KyeJMSBWeEBxS8oIdeLVuMOwFIHBnU32pTEEOBnMidQ5Dq1O+iCIN8g1iLVXdTGmqdFNhaTB2hfX3hjEnkC7z1qFcYLCNBFt+UDEMseczzmZ1BdpyvkZea9HfPNMgh6yGa/aWglA16yqe6wA8HYTgJva+44wvM=&amp;lt;/DQ&amp;gt;&amp;lt;InverseQ&amp;gt;RuCHHiXPBDU7u2xT7oXNmJqdbWIvcCorWbpklzA9+mYIj0pTJ+F5Cwleg8v4ckJKcLnb7XwzRobZ3GBcnETttU3EqJS2rtWS91QvQYN7XNPsTPisnb6fifWu+CVswWIYvUU4AdRHxmpO/Aa8i2IAdm92Wwu953nrVRssZKQCAn8=&amp;lt;/InverseQ&amp;gt;&amp;lt;D&amp;gt;R4n8VswhkBV+ldkwVpx1E6/nI/cMO99yJh6Um9PwgXnkV38vc1bIRfJBPxOES5qdhkfpQX7t5kXIV86GyKQGu6Njp3ZXIyLiQAdaYETuTWxNG1tGvdB222nMcQzAujf78LdNPKnbc+hFAmsdEUIYY3y4TlRWJxvdM10lOh52OTcBX8a+vF30T8aaGtM1cgFqet3DH+zLEdh+EqxmrCZ9XDsPojqEzw6zkDtBs2ilVmz22PnFFVEqWX/yt5yqdr2vEKcBfDUvlJ7pBBnUeqJdv64sPIdL0R1qm2KV+0gW/EZkmnIdVEeD+g9ZQGx0S+akVZAUws3YRsBflmZiB5zZJQ==&amp;lt;/D&amp;gt;&amp;lt;/RSAKeyValue&amp;gt;" />
+      <Setting name="Env" value="Dev" />
+      <Setting name="DataConnectionString" value="BlobEndpoint=https://jymstoredev.blob.core.chinacloudapi.cn/;QueueEndpoint=https://jymstoredev.queue.core.chinacloudapi.cn/;TableEndpoint=https://jymstoredev.table.core.chinacloudapi.cn/;AccountName=jymstoredev;AccountKey=1dCLRLeIeUlLAIBsS9rYdCyFg3UNU239MkwzNOj3BYbREOlnBmM4kfTPrgvKDhSmh6sRp2MdkEYJTv4Ht3fCcg==" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="BlobEndpoint=https://jymstoredev.blob.core.chinacloudapi.cn/;QueueEndpoint=https://jymstoredev.queue.core.chinacloudapi.cn/;TableEndpoint=https://jymstoredev.table.core.chinacloudapi.cn/;AccountName=jymstoredev;AccountKey=1dCLRLeIeUlLAIBsS9rYdCyFg3UNU239MkwzNOj3BYbREOlnBmM4kfTPrgvKDhSmh6sRp2MdkEYJTv4Ht3fCcg==" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="jym-remote" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBpQYJKoZIhvcNAQcDoIIBljCCAZICAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCED8ZTWrIZ6qzTYTY0pgrKkQwDQYJKoZIhvcNAQEBBQAEggEAX/MVO0/l/sXS3YcBs2LxpsqMb6sscR0uz9kSeGBtKBkm/qU0p6J7DYrf/sepzYQYXmtS3GUcfeZgI8nJ+5ad71IOSkgO2Lo2vZAJZhIJ64K+HdyGhCacn41LThH9iryVtXxYwSzc0COfP+pS4TjwRPvynPVDYAlyb+Fdhx203QOi5lRPUZJRqO9cJRWVoaNPZgBWslK2jRUtjf1bSUwHvXFFdGM+Xp1FGsWBHQpGw7gnaQyTS7fB16TU5XmJAQQniZS7S1lKP+gRMkYjtMrf5Nv3SgDUSvTydxt1PAAsrEmPAtH3TLa8p1Ay5GMMG//9/cL4uv21ffnam1R1OF+D+jA7BgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECMAF+nFyEHEigBgQv1wQpuYJ68cKOql0+KZ1BNWnaWuIOgA=" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2017-01-01T23:59:59.0000000+08:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="EAEBC85D3723BAF21E6E7926F150C0CE39D299C7" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+  <Role name="Jinyinmao.AuthManager.Api">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="AppKeys" value="&amp;lt;RSAKeyValue&amp;gt;&amp;lt;Modulus&amp;gt;3o+HBruoycocmkwreug2DJLWzGl7EB0X7xTVvUOauVeX8O5t47jbllacZuv691W85pGO8ng6hQDiBvXtUz2uGJ5k8V6x2xbiK1qtMMP7QMxfLcg5zCB6i4RXFfqA5PXEtJt8S9mOk92rws1BoF3cSA9f7rNyqWToMYD+oGlATuxv5+PRr24HBm9w5eSxb24HvJbThMnUg0leLr77VY1LEOkUNn5TIQ38Y0Wo9gkwrCMLPXLLZqEU46sqAykhrvDOWtTczrBeRkqUICflmSK0OD0H6O958PwPzHW2h6mpFle4NQpP+QDmNbmK4zv7j71veelcuKV0WUcbXe/hfYSXzw==&amp;lt;/Modulus&amp;gt;&amp;lt;Exponent&amp;gt;AQAB&amp;lt;/Exponent&amp;gt;&amp;lt;P&amp;gt;7Qo+FrkpSBOuNUba7KoEW+L0yU8W+AETxeOVLST4Ugas/NlBnbPy/JsziIHp0IXz3f5HXVy+P/DPbztkCNXD3awyMNRQ2z+Otr90ybTQ5DMShugKRPGFtPs4m6ALtN8YSgzQJuK0BFB4d07IX0k3KHEqEob2UGcKT8Ogn4loDXE=&amp;lt;/P&amp;gt;&amp;lt;Q&amp;gt;8FzMQ/2F/O9UxRs5QMxCqFpuLE466iDY3oyZmwdOqKOn0uXs1UiVGXRcubBcGiQVbmMcCLlvogohjYp5mUU9Z1gTI6iklvOzoEOdxb8n92FwlOcZGval7L4DmHjLH2HFDjM4djNjAKdJngDg4r938QZIqONXSGeg3g06EymNWT8=&amp;lt;/Q&amp;gt;&amp;lt;DP&amp;gt;ey8ZeSGcjHJ90/4Qg3EPdtkJMRzC6PtWVT6iJaXSzn3dpEEbUmNT4Waeb1BkPBOA2lrsp14tGHmCs2F/6P9+HFMCelG7+1SaS+pPPQuUiyLne+hWfeGuBJGRp36S1tohe0oRWkPyHVPcZtQwWSRpX8D/hkVQ+BO0TiNx87aqtmE=&amp;lt;/DP&amp;gt;&amp;lt;DQ&amp;gt;Idc+3xezpJ/hlHq3vdrES8Wnm09MVihXwEWVXtFRjsaz2yqKBKFadKIAaBhfb0LDTa5ghQ3unKbGgJINernX4lPxJeUZfzNCh/7dGLlIHDk4y44Z58TwKXu7L91Z48o1H0Gw4ltrxezHnZpMD0Cb13BmDHktkcEdUgYUthv0jas=&amp;lt;/DQ&amp;gt;&amp;lt;InverseQ&amp;gt;MT1wLbYdxmf995ZTCSJQgyGgFSqr3Fkdt/wYJP9VMUnYKp6PPHzTOs3urul6YIs9GWQ+hl7JBiqOQgUPsSc2WkUt2q/3kf7eKnzJiFrz8sOgL4sU7oxKgUW+i0wnfgvRmbU2R8b6vFBkfI6HFtdhRqzo5llZFe8/+Gl1ZK7SYGY=&amp;lt;/InverseQ&amp;gt;&amp;lt;D&amp;gt;ZD113fD4sUYwQsiqzrU23svmJfQeQuAvrvWN3SxNTEwo+ZGR+f6BHIHO+MYxZ2P87EZEAW5oQQ5oPyVV6md9+cWhhlsVtS1l2YwCNFQY3pMODVNAwPEh8KO/C32jvzv4iDX9sjX/MxckrN0AwWd09xnBpgO50ZTKxb0pMfulxMV/Dbykip10SdF4wZ7RSg8p0ol8WSwbhYGbgTp2aJEsVj9SZQCbXifW2P37lpFlfz20Sm4+vhDcrZhpFtHh2LILA+sqxVDw0hOkXuyEu8FQu1FahzX3xd+GrG77EcowpSP0gyfsN6qKUfwaP0jW+f7Ze0uOFHiav5/CSwhu5jm/MQ==&amp;lt;/D&amp;gt;&amp;lt;/RSAKeyValue&amp;gt;" />
+      <Setting name="Env" value="Dev" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="BlobEndpoint=https://jymstoredev.blob.core.chinacloudapi.cn/;QueueEndpoint=https://jymstoredev.queue.core.chinacloudapi.cn/;TableEndpoint=https://jymstoredev.table.core.chinacloudapi.cn/;AccountName=jymstoredev;AccountKey=1dCLRLeIeUlLAIBsS9rYdCyFg3UNU239MkwzNOj3BYbREOlnBmM4kfTPrgvKDhSmh6sRp2MdkEYJTv4Ht3fCcg==" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="jym-remote" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBpQYJKoZIhvcNAQcDoIIBljCCAZICAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCED8ZTWrIZ6qzTYTY0pgrKkQwDQYJKoZIhvcNAQEBBQAEggEAX/MVO0/l/sXS3YcBs2LxpsqMb6sscR0uz9kSeGBtKBkm/qU0p6J7DYrf/sepzYQYXmtS3GUcfeZgI8nJ+5ad71IOSkgO2Lo2vZAJZhIJ64K+HdyGhCacn41LThH9iryVtXxYwSzc0COfP+pS4TjwRPvynPVDYAlyb+Fdhx203QOi5lRPUZJRqO9cJRWVoaNPZgBWslK2jRUtjf1bSUwHvXFFdGM+Xp1FGsWBHQpGw7gnaQyTS7fB16TU5XmJAQQniZS7S1lKP+gRMkYjtMrf5Nv3SgDUSvTydxt1PAAsrEmPAtH3TLa8p1Ay5GMMG//9/cL4uv21ffnam1R1OF+D+jA7BgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECMAF+nFyEHEigBgQv1wQpuYJ68cKOql0+KZ1BNWnaWuIOgA=" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2017-01-01T23:59:59.0000000+08:00" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="EAEBC85D3723BAF21E6E7926F150C0CE39D299C7" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+  <NetworkConfiguration>
+    <VirtualNetworkSite name="VPN-dev" />
+    <AddressAssignments>
+      <InstanceAddress roleName="Jinyinmao.AuthManager.Api">
+        <Subnets>
+          <Subnet name="Subnet-web" />
+        </Subnets>
+      </InstanceAddress>
+      <InstanceAddress roleName="Jinyinmao.AuthManager.Silo">
+        <Subnets>
+          <Subnet name="Subnet-web" />
+        </Subnets>
+      </InstanceAddress>
+    </AddressAssignments>
+  </NetworkConfiguration>
+</ServiceConfiguration>

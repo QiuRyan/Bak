@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ClientConfiguration xmlns="urn:orleans">
+  <Gateway Address="localhost" Port="30000" />
+  <!--<SystemStore SystemStoreType="AzureTable" DeploymentId="73933f9d3b3e49f1899c6b124d15efdd" DataConnectionString="BlobEndpoint=https://jymstoredev.blob.core.chinacloudapi.cn/;QueueEndpoint=https://jymstoredev.queue.core.chinacloudapi.cn/;TableEndpoint=https://jymstoredev.table.core.chinacloudapi.cn/;AccountName=jymstoredev;AccountKey=1dCLRLeIeUlLAIBsS9rYdCyFg3UNU239MkwzNOj3BYbREOlnBmM4kfTPrgvKDhSmh6sRp2MdkEYJTv4Ht3fCcg==" />-->
+  <Tracing DefaultTraceLevel="Info" TraceToConsole="true" TraceToFile="{0}-{1}.log" WriteMessagingTraces="false" BulkMessageLimit="1000">
+    <TraceLevelOverride LogPrefix="Runtime" TraceLevel="Info" />
+    <TraceLevelOverride LogPrefix="Application" TraceLevel="Info" />
+    <TraceLevelOverride LogPrefix="AssemblyLoader" TraceLevel="Warning" />
+  </Tracing>
+
+  <Statistics MetricsTableWriteInterval="300s" PerfCounterWriteInterval="30s" LogWriteInterval="300s" WriteLogStatisticsToTable="true" StatisticsCollectionLevel="Info" />
+  <Messaging ResponseTimeout="30s" ClientSenderBuckets="8192" MaxResendCount="0" />
+</ClientConfiguration>

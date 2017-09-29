@@ -3,3 +3,6 @@
 /Signature/Source/jinyinmao.Signature.ServiceTests/Properties
 /Signature/Source/jinyinmao.Signature.ServiceTests/bin
 /Goverment/Government/Source/packages
+/Auth/AuthManager/Source/packages
+/Auth/AuthManager/Source/Services/Jinyinmao.AuthManager.Service.User/obj
+/Auth/AuthManager/Source/Services/Jinyinmao.AuthManager.Service.User/bin

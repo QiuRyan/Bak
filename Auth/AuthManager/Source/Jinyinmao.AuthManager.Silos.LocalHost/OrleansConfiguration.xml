@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<OrleansConfiguration xmlns="urn:orleans">
+  <Globals>
+    <StorageProviders>
+    </StorageProviders>
+    <SeedNode Address="localhost" Port="11111" />
+  </Globals>
+  <Defaults>
+    <Networking Address="localhost" Port="11111" />
+    <ProxyingGateway Address="localhost" Port="30000" />
+    <Tracing DefaultTraceLevel="Error" TraceToConsole="true" TraceToFile="{0}-{1}.log" WriteTraces="false">
+      <TraceLevelOverride LogPrefix="Application" TraceLevel="Error" />
+    </Tracing>
+  </Defaults>
+  <!--<Globals>
+    <StorageProviders>
+      <Provider Type="Yuyi.Jinyinmao.Domain.AzureProvider" Name="Azure" DataConnectionString="" />
+      <Provider Type="Yuyi.Jinyinmao.Domain.SqlDatabaseProvider" Name="SqlDatabase" DataConnectionString="" />
+    </StorageProviders>
+    <SystemStore ServiceId="5017AE96-945C-4E80-AA5A-11FB559B614A" SystemStoreType="AzureTable" DeploymentId="9056b0efc23246b5a5e9f10997eaefe9" DataConnectionString="BlobEndpoint=https://jymstoretest.blob.core.chinacloudapi.cn/;QueueEndpoint=https://jymstoretest.queue.core.chinacloudapi.cn/;TableEndpoint=https://jymstoretest.table.core.chinacloudapi.cn/;AccountName=jymstoretest;AccountKey=RAERcTXWBkJLlyJOWSle+tewwKTdYkSb7U3wygwliGD/pMmPeVs4I6hcYvhncey/9QHPt66qphgRZPI/AV2VDQ==" />
+  </Globals>
+  <Defaults>
+    -->
+  <!--
+	  To turn tracing off, set DefaultTraceLevel="Off" and have no overrides. To see a minimum of messages, set DefaultTraceLevel="Error".
+      For the trace log file name, {0} is the silo name and {1} is the current time.
+      Setting WriteTraces to true will cause detailed performance information to be collected and logged about the individual steps in the
+      message lifecycle. This may be useful debugging performance issues.
+      -->
+  <!--
+    <Tracing DefaultTraceLevel="Warning" TraceToConsole="false" TraceToFile="{0}-{1}.log" WriteTraces="false">
+      -->
+  <!--
+	    To get more detailed application logging, you can change the TraceLevel attribute value to "Verbose" or "Verbose2".
+	    Depending on the log levels you have used in your code, this will cause additional messages to be written to the log.
+	    -->
+  <!--
+      <TraceLevelOverride LogPrefix="Application" TraceLevel="Warning" />
+    </Tracing>
+  </Defaults>-->
+</OrleansConfiguration>

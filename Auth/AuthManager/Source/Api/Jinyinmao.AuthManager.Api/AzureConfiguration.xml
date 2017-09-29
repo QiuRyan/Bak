@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ClientConfiguration xmlns="urn:orleans">
+  <SystemStore SystemStoreType="AzureTable" DeploymentId="73933f9d3b3e49f1899c6b124d15efdd"
+               DataConnectionString="BlobEndpoint=https://jymstoredev.blob.core.chinacloudapi.cn/;QueueEndpoint=https://jymstoredev.queue.core.chinacloudapi.cn/;TableEndpoint=https://jymstoredev.table.core.chinacloudapi.cn/;AccountName=jymstoredev;AccountKey=1dCLRLeIeUlLAIBsS9rYdCyFg3UNU239MkwzNOj3BYbREOlnBmM4kfTPrgvKDhSmh6sRp2MdkEYJTv4Ht3fCcg==" />
+  <Messaging ResponseTimeout="300" ResendOnTimeout="true" MaxResendCount="10" />
+  <Tracing DefaultTraceLevel="Error" TraceToConsole="false" TraceToFile="{0}-{1}.log" WriteTraces="false">
+  </Tracing>
+</ClientConfiguration>

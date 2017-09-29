@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OrleansConfiguration xmlns="urn:orleans">
+  <Globals>
+    <StorageProviders>
+    </StorageProviders>
+    <SystemStore ServiceId="0B29B0BF-BB4C-4E5A-9DDE-1985588C2ECA" />
+  </Globals>
+  <Defaults>
+    <!--
+	  To turn tracing off, set DefaultTraceLevel="Off" and have no overrides. To see a minimum of messages, set DefaultTraceLevel="Error".
+      For the trace log file name, {0} is the silo name and {1} is the current time.
+      Setting WriteTraces to true will cause detailed performance information to be collected and logged about the individual steps in the
+      message lifecycle. This may be useful debugging performance issues.
+      -->
+    <Tracing DefaultTraceLevel="Warning" TraceToConsole="false" TraceToFile="{0}-{1}.log" WriteTraces="false">
+      <!--
+	    To get more detailed application logging, you can change the TraceLevel attribute value to "Verbose" or "Verbose2".
+	    Depending on the log levels you have used in your code, this will cause additional messages to be written to the log.
+	    -->
+      <TraceLevelOverride LogPrefix="Application" TraceLevel="Warning" />
+    </Tracing>
+  </Defaults>
+</OrleansConfiguration>
